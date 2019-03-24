@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!--配置数据库连接信息-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql:///lock?serverTimezone=UTC"
+                        userId="root"
+                        password="Songmingyu123@">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!--指定javaBean生成的位置-->
+        <javaModelGenerator
+                targetPackage="com.dhy.yycompany.lock.bean"
+                targetProject="src/main/src">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!--指定sql映射文件生成的位置-->
+        <sqlMapGenerator
+                targetPackage="mapper"
+                targetProject="src/main/Resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!--指定dao接口生成的位置-->
+        <javaClientGenerator
+                type="XMLMAPPER"
+                targetPackage="com.dhy.yycompany.lock.dao"
+                targetProject="src/main/src">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!--table指定每个表生成策略-->
+        <!--<table tableName="habit_category" domainObjectName="HabitCategory"></table>-->
+        <!--<table tableName="showcase_category" domainObjectName="ShowcaseCategory"></table>-->
+        <!--<table tableName="favorite_product" domainObjectName="FavoriteProduct"></table>-->
+        <!--<table tableName="comments" domainObjectName="Comments"></table>-->
+        <!--<table tableName="sell_reply" domainObjectName="SellReply"></table>-->
+        <!--<table tableName="users_reply" domainObjectName="UsersReply"></table>-->
+        <!--<table tableName="attribute_name" domainObjectName="AttributeName"></table>-->
+        <!--<table tableName="attribute_value" domainObjectName="AttributeValue"></table>-->
+        <!--<table tableName="price" domainObjectName="Price"></table>-->
+        <!--<table tableName="price" domainObjectName="Price"></table>-->
+        <!--<table tableName="cart" domainObjectName="Cart"></table>-->
+        <!--<table tableName="store" domainObjectName="Store"></table>-->
+        <!--<table tableName="favorite_shops" domainObjectName="FavoriteShops"></table>-->
+        <!--<table tableName="borrow_sell" domainObjectName="BorrowSell"></table>-->
+        <!--<table tableName="sell_details" domainObjectName="SellDetails"></table>-->
+        <!--<table tableName="store" domainObjectName="Store"></table>-->
+        <!--<table tableName="favorite_shops" domainObjectName="FavoriteShops"></table>-->
+        <!--<table tableName="showcase" domainObjectName="Showcase"></table>-->
+        <!--<table tableName="s_and_p" domainObjectName="SAndP"></table>-->
+        <!--<table tableName="seller_violation" domainObjectName="SellerViolation"></table>-->
+        <!--<table tableName="orders" domainObjectName="Orders"></table>-->
+        <!--<table tableName="order_item" domainObjectName="OrderItem"></table>-->
+        <!--<table tableName="attribute_name" domainObjectName="AttributeName"></table>-->
+        <!--<table tableName="attribute_value" domainObjectName="AttributeValue"></table>-->
+        <!--<table tableName="order_item" domainObjectName="OrderItem"></table>-->
+        <!--<table tableName="brand" domainObjectName="Brand"></table>-->
+        <!--<table tableName="c_of_a" domainObjectName="COfA"></table>-->
+        <!--<table tableName="company" domainObjectName="Company"></table>-->
+        <!--<table tableName="product" domainObjectName="Product"></table>-->
+        <!--<table tableName="sell_details" domainObjectName="SellDetails"></table>-->
+        <!--<table tableName="sell_details" domainObjectName="SellDetails"></table>-->
+        <!--<table tableName="business_permits" domainObjectName="BusinessPermits"></table>-->
+        <!--<table tableName="place_order" domainObjectName="PlaceOrder"></table>-->
+        <!--<table tableName="place_order_details" domainObjectName="PlaceOrderDetails"></table>-->
+        <!--<table tableName="sell_order" domainObjectName="SellOrder"></table>-->
+        <!--<table tableName="orders" domainObjectName="Orders"></table>-->
+        <!--<table tableName="order_item" domainObjectName="OrderItem"></table>-->
+        <!--<table tableName="comments_x" domainObjectName="CommentsX"></table>-->
+        <!--&lt;!&ndash;<table tableName="users" domainObjectName="Users"></table>&ndash;&gt;-->
+        <!--<table tableName="sell_reply" domainObjectName="SellReply"></table>-->
+        <!--<table tableName="supplier" domainObjectName="Supplier"></table>-->
+        <!--<table tableName="category" domainObjectName="Category"></table>-->
+        <!--<table tableName="sell_details" domainObjectName="SellDetails"></table>-->
+        <!--<table tableName="business_permits" domainObjectName="BusinessPermits"></table>-->
+        <!--<table tableName="audit_store" domainObjectName="AuditStore"></table>-->
+        <!--<table tableName="physical_store" domainObjectName="PhysicalStore"></table>-->
+        <!--<table tableName="store_b" domainObjectName="StoreB"></table>-->
+        <!--<table tableName="orders_x" domainObjectName="OrdersX"></table>-->
+        <!--<table tableName="after_ale" domainObjectName="AfterAle"></table>-->
+        <!--<table tableName="delivery_address" domainObjectName="DeliveryAddress"></table>-->
+        <!--<table tableName="anli" domainObjectName="Anli"></table>-->
+        <!--<table tableName="a_and_s" domainObjectName="AAndS"></table>-->
+        <!--<table tableName="anli_content" domainObjectName="AnliContent"></table>-->
+        <!--<table tableName="user_info" domainObjectName="UserInfo"></table>-->
+        <table tableName="apartment" domainObjectName="Apartment"></table>
+        <table tableName="room" domainObjectName="Room"></table>
+        <!--<table tableName="anli_reply" domainObjectName="AnliReply"></table>-->
+
+
+
+
+   </context>
+
+</generatorConfiguration>
