@@ -1,6 +1,8 @@
 package com.dhy.yycompany.lock.test;
 
+import com.dhy.yycompany.lock.bean.Room;
 import com.dhy.yycompany.lock.service.indexService.IndexService;
+import com.dhy.yycompany.lock.service.roomInfoService.RoomInfoService;
 import com.dhy.yycompany.lock.service.testService.TestService;
 
 import org.junit.Test;
@@ -20,5 +22,11 @@ public class ImplTest {
         ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
         IndexService indexService = (IndexService) context.getBean("indexServiceImpl");
         indexService.getRooms();
+    }
+    @Test
+    public void getRoomInfo(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        RoomInfoService roomInfoService = (RoomInfoService) context.getBean("roomInfoServiceImpl");
+        roomInfoService.getRoomInfo(2);
     }
 }

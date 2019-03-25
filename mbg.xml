@@ -95,8 +95,9 @@
         <!--<table tableName="a_and_s" domainObjectName="AAndS"></table>-->
         <!--<table tableName="anli_content" domainObjectName="AnliContent"></table>-->
         <!--<table tableName="user_info" domainObjectName="UserInfo"></table>-->
-        <table tableName="apartment" domainObjectName="Apartment"></table>
-        <table tableName="room" domainObjectName="Room"></table>
+        <!--<table tableName="apartment" domainObjectName="Apartment"></table>-->
+        <!--<table tableName="room" domainObjectName="Room"></table>-->
+        <table tableName="v_room_user_lock" domainObjectName="VRoomUserLock"></table>
         <!--<table tableName="anli_reply" domainObjectName="AnliReply"></table>-->
 
 
