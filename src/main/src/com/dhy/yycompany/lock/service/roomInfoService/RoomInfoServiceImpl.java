@@ -1,15 +1,12 @@
 package com.dhy.yycompany.lock.service.roomInfoService;
 
-import com.dhy.yycompany.lock.bean.UserInfo;
-import com.dhy.yycompany.lock.bean.UserInfoExample;
-import com.dhy.yycompany.lock.bean.VRoomUserLock;
-import com.dhy.yycompany.lock.bean.VRoomUserLockExample;
-import com.dhy.yycompany.lock.dao.UserInfoMapper;
-import com.dhy.yycompany.lock.dao.VRoomUserLockMapper;
+import com.dhy.yycompany.lock.bean.*;
+import com.dhy.yycompany.lock.dao.*;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.test.context.jdbc.Sql;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
@@ -28,7 +25,7 @@ public class RoomInfoServiceImpl implements RoomInfoService {
      * 4.根据room_id找到所有住户
      */
     @Override
-    public void getRoomInfo(int room_id) {
+    public Map<String, Object> getRoomInfo(int room_id) {
         VRoomUserLockExample vRoomUserLockExample=new VRoomUserLockExample();
         VRoomUserLockExample.Criteria criteria=vRoomUserLockExample.createCriteria();
         criteria.andRIdEqualTo(room_id);
@@ -42,6 +39,8 @@ public class RoomInfoServiceImpl implements RoomInfoService {
         System.out.println("time"+vRoomUserLockList.get(0).getStayTime()+"~"+vRoomUserLockList.get(0).getRetreatTime());
         System.out.println("residentNum"+vRoomUserLockList.get(0).getResidentNum());
         System.out.println("status"+vRoomUserLockList.get(0).getlStatus());
+
+
         UserInfoExample userInfoExample=new UserInfoExample();
         UserInfoExample.Criteria criteria1=userInfoExample.createCriteria();
         criteria1.andURoomIdEqualTo(room_id);
@@ -53,5 +52,73 @@ public class RoomInfoServiceImpl implements RoomInfoService {
         }
         map.put("users",userInfoList);
 
+        RoomExample roomExample=new RoomExample();
+        RoomExample.Criteria criteria2=roomExample.createCriteria();
+        criteria2.andRIdEqualTo(room_id);
+        RoomMapper roomMapper=sqlSession.getMapper(RoomMapper.class);
+        List<Room> roomList=roomMapper.selectByExample(roomExample);
+        map.put("price",roomList.get(0).getrPrice());
+        System.out.println("map=="+map);
+        sqlSession.commit();
+        sqlSession.close();
+        return map;
+    }
+
+
+    /**
+     * 1。lock_id查出lock_info表的信息
+     * 2。lock_id 查出v_key_username视图中的信息
+     * 3。lock_id 查出v_daily_userinfo视图中的信息
+     *
+     *
+     * map对象的信息
+     *      * lockID:门锁id
+     *      * software:软件版本
+     *      * hardware:硬件版本
+     *      * status:门锁状态
+     *      * keyList:密码bean的list
+     *      * openlist:开门bean的list
+     * @param lock_id
+     * @return
+     */
+    @Override
+    public Map<String, Object> getLockInfo(int lock_id) {
+        LockInfoExample lockInfoExample=new LockInfoExample();
+        LockInfoExample.Criteria criteria=lockInfoExample.createCriteria();
+        criteria.andLIdEqualTo(lock_id);
+        SqlSession sqlSession=sqlSessionFactory.openSession();
+        LockInfoMapper lockInfoMapper=sqlSession.getMapper(LockInfoMapper.class);
+        List<LockInfo> lockInfoList=lockInfoMapper.selectByExample(lockInfoExample);
+        System.out.println("lockInfoList="+lockInfoList);
+
+        VKeyUsernameExample vKeyUsernameExample=new VKeyUsernameExample();
+        VKeyUsernameExample.Criteria criteria1=vKeyUsernameExample.createCriteria();
+        criteria1.andKLockIdEqualTo(lock_id);
+        VKeyUsernameMapper vKeyUsernameMapper=sqlSession.getMapper(VKeyUsernameMapper.class);
+        List<VKeyUsername> vKeyUsernameList=vKeyUsernameMapper.selectByExample(vKeyUsernameExample);
+        System.out.println("vKeyUsernameList"+vKeyUsernameList);
+
+        VDailyUserInfoExample vDailyUserInfoExample=new VDailyUserInfoExample();
+        VDailyUserInfoExample.Criteria criteria2=vDailyUserInfoExample.createCriteria();
+        criteria2.andDLockIdEqualTo(lock_id);
+        VDailyUserInfoMapper vDailyUserInfoMapper=sqlSession.getMapper(VDailyUserInfoMapper.class);
+        List<VDailyUserInfo> vDailyUserInfoList=vDailyUserInfoMapper.selectByExample(vDailyUserInfoExample);
+        System.out.println("vDailyUserInfoList"+vDailyUserInfoList);
+
+
+        Map<String,Object> map=new HashMap<>();
+
+        map.put("LockID",lockInfoList.get(0).getlId());
+        map.put("software",lockInfoList.get(0).getlSoftVer());
+        map.put("hardware",lockInfoList.get(0).getlHardVer());
+        map.put("status",lockInfoList.get(0).getlStatus());
+        map.put("keyList",vKeyUsernameList);
+        map.put("openlist",vDailyUserInfoList);
+
+        System.out.println("map="+map);
+
+        sqlSession.commit();
+        sqlSession.close();
+        return null;
     }
 }

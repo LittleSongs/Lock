@@ -33,6 +33,8 @@ public class IndexServiceImpl implements IndexService {
 //        System.out.println(userInfo.toString());
         SqlSession sqlSession = sqlSessionFactory.openSession();
         ApartmentExample apartmentExample = new ApartmentExample();
+        ApartmentExample.Criteria criteria=apartmentExample.createCriteria();
+        criteria.andADeleteEqualTo(0);
         ApartmentMapper apartmentMapper = sqlSession.getMapper(ApartmentMapper.class);
         List<Apartment> apartmentList = apartmentMapper.selectByExample(apartmentExample);
 
@@ -51,10 +53,13 @@ public class IndexServiceImpl implements IndexService {
 //                listMap.add(map);
 //                System.out.println("----------");
 //                System.out.println(listMap);
+                System.out.println("apartmentMap="+apartmentMap);
             }
 
 
             RoomExample roomExample = new RoomExample();
+            RoomExample.Criteria criteria1=roomExample.createCriteria();
+            criteria1.andRDeleteEqualTo(0);
             roomExample.setOrderByClause("r_apartment_id asc");
             RoomMapper roomMapper = sqlSession.getMapper(RoomMapper.class);
             List<Room> roomList = roomMapper.selectByExample(roomExample);

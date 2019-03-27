@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dhy.yycompany.lock.dao.LockInfoMapper">
+  <resultMap id="BaseResultMap" type="com.dhy.yycompany.lock.bean.LockInfo">
+    <id column="l_id" jdbcType="INTEGER" property="lId" />
+    <result column="l_uuid" jdbcType="VARCHAR" property="lUuid" />
+    <result column="l_status" jdbcType="INTEGER" property="lStatus" />
+    <result column="l_supplier" jdbcType="VARCHAR" property="lSupplier" />
+    <result column="l_soft_ver" jdbcType="VARCHAR" property="lSoftVer" />
+    <result column="l_hard_ver" jdbcType="VARCHAR" property="lHardVer" />
+    <result column="l_production_date" jdbcType="VARCHAR" property="lProductionDate" />
+    <result column="l_introduction" jdbcType="VARCHAR" property="lIntroduction" />
+    <result column="l_delete" jdbcType="INTEGER" property="lDelete" />
+    <result column="l_modify" jdbcType="INTEGER" property="lModify" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    l_id, l_uuid, l_status, l_supplier, l_soft_ver, l_hard_ver, l_production_date, l_introduction, 
+    l_delete, l_modify
+  </sql>
+  <select id="selectByExample" parameterType="com.dhy.yycompany.lock.bean.LockInfoExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from lock_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from lock_info
+    where l_id = #{lId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from lock_info
+    where l_id = #{lId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.dhy.yycompany.lock.bean.LockInfoExample">
+    delete from lock_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.dhy.yycompany.lock.bean.LockInfo">
+    insert into lock_info (l_id, l_uuid, l_status, 
+      l_supplier, l_soft_ver, l_hard_ver, 
+      l_production_date, l_introduction, l_delete, 
+      l_modify)
+    values (#{lId,jdbcType=INTEGER}, #{lUuid,jdbcType=VARCHAR}, #{lStatus,jdbcType=INTEGER}, 
+      #{lSupplier,jdbcType=VARCHAR}, #{lSoftVer,jdbcType=VARCHAR}, #{lHardVer,jdbcType=VARCHAR}, 
+      #{lProductionDate,jdbcType=VARCHAR}, #{lIntroduction,jdbcType=VARCHAR}, #{lDelete,jdbcType=INTEGER}, 
+      #{lModify,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.dhy.yycompany.lock.bean.LockInfo">
+    insert into lock_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="lId != null">
+        l_id,
+      </if>
+      <if test="lUuid != null">
+        l_uuid,
+      </if>
+      <if test="lStatus != null">
+        l_status,
+      </if>
+      <if test="lSupplier != null">
+        l_supplier,
+      </if>
+      <if test="lSoftVer != null">
+        l_soft_ver,
+      </if>
+      <if test="lHardVer != null">
+        l_hard_ver,
+      </if>
+      <if test="lProductionDate != null">
+        l_production_date,
+      </if>
+      <if test="lIntroduction != null">
+        l_introduction,
+      </if>
+      <if test="lDelete != null">
+        l_delete,
+      </if>
+      <if test="lModify != null">
+        l_modify,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="lId != null">
+        #{lId,jdbcType=INTEGER},
+      </if>
+      <if test="lUuid != null">
+        #{lUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="lStatus != null">
+        #{lStatus,jdbcType=INTEGER},
+      </if>
+      <if test="lSupplier != null">
+        #{lSupplier,jdbcType=VARCHAR},
+      </if>
+      <if test="lSoftVer != null">
+        #{lSoftVer,jdbcType=VARCHAR},
+      </if>
+      <if test="lHardVer != null">
+        #{lHardVer,jdbcType=VARCHAR},
+      </if>
+      <if test="lProductionDate != null">
+        #{lProductionDate,jdbcType=VARCHAR},
+      </if>
+      <if test="lIntroduction != null">
+        #{lIntroduction,jdbcType=VARCHAR},
+      </if>
+      <if test="lDelete != null">
+        #{lDelete,jdbcType=INTEGER},
+      </if>
+      <if test="lModify != null">
+        #{lModify,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.dhy.yycompany.lock.bean.LockInfoExample" resultType="java.lang.Long">
+    select count(*) from lock_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update lock_info
+    <set>
+      <if test="record.lId != null">
+        l_id = #{record.lId,jdbcType=INTEGER},
+      </if>
+      <if test="record.lUuid != null">
+        l_uuid = #{record.lUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lStatus != null">
+        l_status = #{record.lStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.lSupplier != null">
+        l_supplier = #{record.lSupplier,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lSoftVer != null">
+        l_soft_ver = #{record.lSoftVer,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lHardVer != null">
+        l_hard_ver = #{record.lHardVer,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lProductionDate != null">
+        l_production_date = #{record.lProductionDate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lIntroduction != null">
+        l_introduction = #{record.lIntroduction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lDelete != null">
+        l_delete = #{record.lDelete,jdbcType=INTEGER},
+      </if>
+      <if test="record.lModify != null">
+        l_modify = #{record.lModify,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update lock_info
+    set l_id = #{record.lId,jdbcType=INTEGER},
+      l_uuid = #{record.lUuid,jdbcType=VARCHAR},
+      l_status = #{record.lStatus,jdbcType=INTEGER},
+      l_supplier = #{record.lSupplier,jdbcType=VARCHAR},
+      l_soft_ver = #{record.lSoftVer,jdbcType=VARCHAR},
+      l_hard_ver = #{record.lHardVer,jdbcType=VARCHAR},
+      l_production_date = #{record.lProductionDate,jdbcType=VARCHAR},
+      l_introduction = #{record.lIntroduction,jdbcType=VARCHAR},
+      l_delete = #{record.lDelete,jdbcType=INTEGER},
+      l_modify = #{record.lModify,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.dhy.yycompany.lock.bean.LockInfo">
+    update lock_info
+    <set>
+      <if test="lUuid != null">
+        l_uuid = #{lUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="lStatus != null">
+        l_status = #{lStatus,jdbcType=INTEGER},
+      </if>
+      <if test="lSupplier != null">
+        l_supplier = #{lSupplier,jdbcType=VARCHAR},
+      </if>
+      <if test="lSoftVer != null">
+        l_soft_ver = #{lSoftVer,jdbcType=VARCHAR},
+      </if>
+      <if test="lHardVer != null">
+        l_hard_ver = #{lHardVer,jdbcType=VARCHAR},
+      </if>
+      <if test="lProductionDate != null">
+        l_production_date = #{lProductionDate,jdbcType=VARCHAR},
+      </if>
+      <if test="lIntroduction != null">
+        l_introduction = #{lIntroduction,jdbcType=VARCHAR},
+      </if>
+      <if test="lDelete != null">
+        l_delete = #{lDelete,jdbcType=INTEGER},
+      </if>
+      <if test="lModify != null">
+        l_modify = #{lModify,jdbcType=INTEGER},
+      </if>
+    </set>
+    where l_id = #{lId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.dhy.yycompany.lock.bean.LockInfo">
+    update lock_info
+    set l_uuid = #{lUuid,jdbcType=VARCHAR},
+      l_status = #{lStatus,jdbcType=INTEGER},
+      l_supplier = #{lSupplier,jdbcType=VARCHAR},
+      l_soft_ver = #{lSoftVer,jdbcType=VARCHAR},
+      l_hard_ver = #{lHardVer,jdbcType=VARCHAR},
+      l_production_date = #{lProductionDate,jdbcType=VARCHAR},
+      l_introduction = #{lIntroduction,jdbcType=VARCHAR},
+      l_delete = #{lDelete,jdbcType=INTEGER},
+      l_modify = #{lModify,jdbcType=INTEGER}
+    where l_id = #{lId,jdbcType=INTEGER}
+  </update>
+</mapper>
