@@ -40,4 +40,10 @@ public interface RoomInfoService {
      */
     Map<String,Object> getLockInfo(int lock_id);
 
+    /**
+     * 删除单个房间
+     * @param roomID
+     */
+    void deleteRoom(int roomID);
+
 }

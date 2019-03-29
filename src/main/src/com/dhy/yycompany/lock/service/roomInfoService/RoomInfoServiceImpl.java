@@ -121,4 +121,9 @@ public class RoomInfoServiceImpl implements RoomInfoService {
         sqlSession.close();
         return null;
     }
+
+    @Override
+    public void deleteRoom(int roomID) {
+
+    }
 }

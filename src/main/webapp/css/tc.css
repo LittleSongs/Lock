@@ -1,0 +1,106 @@
+/*弹出层*/
+#glygl {
+    display: none;
+    background-color: #eaeaea;
+    z-index: 11;
+    width: 50%;
+    height: 400px;
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    margin:auto;
+}
+
+#glygl .close{
+    text-align: right;
+    margin-right: 5px;
+    background-color: #eaeaea;
+}
+
+/*关闭按钮*/
+#glygl .close a {
+    text-decoration: none;
+    color: #2D2C3B;
+}
+.ys{
+background-color:#a4d9ee;
+}
+.qrxg{
+
+    margin: 0;
+    padding: 2px;
+    border: 1px solid transparent;
+    outline: none;
+
+    border-radius:5px 5px;
+    background-color: #eaeaea;
+}
+.qrxg:hover{
+    cursor: pointer;
+    background-color: #4a95ee;
+}
+.kp{
+    border: 2px solid #85afdf;
+    border-radius:5px 5px;
+    width:60%;
+}
+.dx{
+    width: 20%;
+}
+
+
+/*增删房间弹出层*/
+#zsfjtc {
+    display: none;
+    background-color: #eaeaea;
+    z-index: 11;
+    width: 50%;
+    position:absolute;
+    top:20%;
+    right:0;
+    left:0;
+    min-height: 193px;
+    margin:auto;
+}
+
+#zsfjtc .close{
+    text-align: right;
+    margin-right: 5px;
+    background-color: #eaeaea;
+}
+
+/*关闭按钮*/
+#zsfjtc .close a {
+    text-decoration: none;
+    color: #2D2C3B;
+}
+
+
+/*弹出层*/
+#xgzjtc {
+    display: none;
+    background-color: #eaeaea;
+    z-index: 11;
+    width: 260px;
+    height: 200px;
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    margin:auto;
+}
+
+#xgzjtc .close{
+    text-align: right;
+    margin-right: 5px;
+    background-color: #eaeaea;
+}
+
+/*关闭按钮*/
+#xgzjtc .close a {
+    text-decoration: none;
+    color: #2D2C3B;
+}

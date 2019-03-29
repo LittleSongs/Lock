@@ -1,0 +1,166 @@
+.table{
+    width: 100%;
+    text-align:center;
+    white-space: nowrap;
+    font-size: 15px;
+}
+
+.onoffswitch{
+
+    position:absolute;
+
+    width:50px;
+
+    display:block;
+
+    left:50%;
+
+    margin-left:-27px;
+
+    -webkit-user-select:none;
+
+    -moz-user-select:none;
+
+    -ms-user-select:none;
+
+}
+
+.onoff_checkbox{
+
+    display:none;
+
+}
+
+.onoff_label{
+
+    display:block;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    border:2px solid #999;
+
+    border-radius:20px;
+
+}
+
+.onoff_inter{
+
+    display:block;
+
+    width:200%;
+
+    margin-left:-100%;
+
+    transition:margin 0.3s ease-in 0s;
+
+}
+
+.onoff_inter:before,
+
+.onoff_inter:after{
+
+    display:block;
+
+    float:left;
+
+    height:20px;
+
+    width:50%;
+
+    padding:0;
+
+    line-height:20px;
+
+    font-size:14px;
+
+    color:white;
+
+    font-family:Trebuchet,Arial,sans-serif;
+
+    font-weight:700;
+
+    box-sizing:border-box;//box-sizing 属性允许您以特定的方式定义匹配某个区域的特定元素。
+
+}
+
+.onoff_inter:before{
+
+    content:'';
+
+    padding-left:13px;
+
+    background-color:#4FACDB ;
+
+    color:#FFFFFF;
+
+}
+
+.onoff_inter:after{
+
+    content:'';
+
+    padding-right:13px;
+
+    background-color:#F50E4C;
+
+    color:#FAFAFA;
+
+    text-align:center;
+
+}
+
+.onoff_switch{
+
+    display:block;
+
+    width:14px;
+
+    margin:4px;
+
+    background:#FFFFFF;
+
+    position:absolute;
+
+    top:0;
+
+    bottom:0;
+
+    right:25px;
+
+    border:1px solid #999999;
+
+    border-radius:20px;
+
+    transition:all 0.3s ease-in 0s;
+
+}
+
+.onoff_checkbox:checked+.onoff_label .onoff_inter{
+
+    margin-left:0;
+
+}
+
+.onoff_checkbox:checked+.onoff_label .onoff_switch{
+
+    right:0;
+
+}
+
+.SAP{
+
+    position:absolute;
+
+    left:0;
+
+}
+
+.FBOI{
+
+    position:absolute;
+
+    right:0;
+
+}

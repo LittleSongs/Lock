@@ -1,4 +1,4 @@
-package com.dhy.yycompany.lock.service.adminService;
+package com.dhy.yycompany.lock.service.AdminService;
 
 import com.dhy.yycompany.lock.bean.KeyInfo;
 import com.dhy.yycompany.lock.dao.KeyInfoMapper;
@@ -13,7 +13,7 @@ import java.util.UUID;
 
 @Service
 @Transactional
-public class administratorServiceImpl implements administratorService {
+public class AdministratorServiceImpl implements AdministratorService {
 
     @Autowired
     private SqlSessionFactory sqlSessionFactory;

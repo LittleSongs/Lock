@@ -1,7 +1,7 @@
 package com.dhy.yycompany.lock.test;
 
-import com.dhy.yycompany.lock.bean.Room;
-import com.dhy.yycompany.lock.service.adminService.administratorService;
+import com.dhy.yycompany.lock.service.AdminService.AdministratorService;
+import com.dhy.yycompany.lock.service.ApartmentService.ApartmentService;
 import com.dhy.yycompany.lock.service.indexService.IndexService;
 import com.dhy.yycompany.lock.service.roomInfoService.RoomInfoService;
 import com.dhy.yycompany.lock.service.testService.TestService;
@@ -62,13 +62,22 @@ public class ImplTest {
         map.put("AvailableTimes","3");
         map.put("FailureTime","2019-03-29");
         ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
-        administratorService administratorService = (administratorService) context.getBean("administratorServiceImpl");
+        AdministratorService administratorService = (AdministratorService) context.getBean("administratorServiceImpl");
         int result=administratorService.setkey(map);
         if(result==0){
             System.out.println("成功");
         }else{
             System.out.println("失败");
         }
+    }
+
+
+    //删除公寓楼
+    @Test
+    public void deleteApartments(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApartmentService apartmentService = (ApartmentService) context.getBean("apartmentServiceImpl");
+        apartmentService.deleteApartment(3);
     }
 
 
