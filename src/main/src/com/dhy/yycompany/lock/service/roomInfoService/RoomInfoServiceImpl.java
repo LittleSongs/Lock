@@ -36,9 +36,10 @@ public class RoomInfoServiceImpl implements RoomInfoService {
         map.put("time",vRoomUserLockList.get(0).getStayTime()+"~"+vRoomUserLockList.get(0).getRetreatTime());//例子： 2019-01-01～2020-11-11
         map.put("residentNum",vRoomUserLockList.get(0).getResidentNum());
         map.put("status",vRoomUserLockList.get(0).getlStatus());
-        System.out.println("time"+vRoomUserLockList.get(0).getStayTime()+"~"+vRoomUserLockList.get(0).getRetreatTime());
-        System.out.println("residentNum"+vRoomUserLockList.get(0).getResidentNum());
-        System.out.println("status"+vRoomUserLockList.get(0).getlStatus());
+
+//        System.out.println("time"+vRoomUserLockList.get(0).getStayTime()+"~"+vRoomUserLockList.get(0).getRetreatTime());
+//        System.out.println("residentNum"+vRoomUserLockList.get(0).getResidentNum());
+//        System.out.println("status"+vRoomUserLockList.get(0).getlStatus());
 
 
         UserInfoExample userInfoExample=new UserInfoExample();
@@ -51,7 +52,6 @@ public class RoomInfoServiceImpl implements RoomInfoService {
             System.out.println(u);
         }
         map.put("users",userInfoList);
-
         RoomExample roomExample=new RoomExample();
         RoomExample.Criteria criteria2=roomExample.createCriteria();
         criteria2.andRIdEqualTo(room_id);
@@ -125,5 +125,11 @@ public class RoomInfoServiceImpl implements RoomInfoService {
     @Override
     public void deleteRoom(int roomID) {
 
+    }
+
+    @Override
+    public Map<String, String> addRoom(int roomNum) {
+
+        return null;
     }
 }

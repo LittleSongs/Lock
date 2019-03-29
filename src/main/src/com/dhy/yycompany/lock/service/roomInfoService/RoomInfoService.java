@@ -4,7 +4,8 @@ import java.util.Map;
 
 public interface RoomInfoService {
 
-    //保存房间信息
+    //点击房间按钮进入
+    //获得单个房间信息
 
     /**
      * map对象的信息
@@ -12,6 +13,7 @@ public interface RoomInfoService {
      * residentNum：住户人数
      * status：门锁状态（1开   0关）
      * users：住户信息list
+     * price：房间价格
      * @param room_id
      * @return
      */
@@ -19,7 +21,7 @@ public interface RoomInfoService {
 
 
 
-
+    //点击门锁管理按钮进入
     //获得门锁的信息：
 
     /**
@@ -40,10 +42,18 @@ public interface RoomInfoService {
      */
     Map<String,Object> getLockInfo(int lock_id);
 
+
+
     /**
      * 删除单个房间
      * @param roomID
      */
     void deleteRoom(int roomID);
 
+
+    /**
+     * 增加单个房间
+     * 提供房间号创建房间
+     */
+    Map<String,String> addRoom(int roomNum);
 }

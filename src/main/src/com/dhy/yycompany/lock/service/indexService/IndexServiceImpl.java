@@ -26,11 +26,6 @@ public class IndexServiceImpl implements IndexService {
     public List<Map<String,Object>> getRooms() {
         String jsonString = "";
 
-//        SqlSession sqlSession = sqlSessionFactory.openSession();
-//        UserInfoMapper mapper = sqlSession.getMapper(UserInfoMapper.class);
-//        UserInfo userInfo = mapper.selectByPrimaryKey(21);
-//        sqlSession.close();
-//        System.out.println(userInfo.toString());
         SqlSession sqlSession = sqlSessionFactory.openSession();
         ApartmentExample apartmentExample = new ApartmentExample();
         ApartmentExample.Criteria criteria=apartmentExample.createCriteria();

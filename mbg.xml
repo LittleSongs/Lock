@@ -8,7 +8,7 @@
         </commentGenerator>
         <!--配置数据库连接信息-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql:///lock?serverTimezone=UTC"
+                        connectionURL="jdbc:mysql://120.79.183.126:3306/lock?serverTimezone=UTC"
                         userId="root"
                         password="Songmingyu123@">
         </jdbcConnection>
@@ -101,8 +101,11 @@
         <!--<table tableName="anli_reply" domainObjectName="AnliReply"></table>-->
         <!--<table tableName="v_key_username" domainObjectName="VKeyUsername"></table>-->
         <!--<table tableName="v_daily_userinfo" domainObjectName="VDailyUserInfo"></table>-->
-        <table tableName="key_info" domainObjectName="KeyInfo"></table>
+        <!--<table tableName="key_info" domainObjectName="KeyInfo"></table>-->
         <!--<table tableName="lock_info" domainObjectName="LockInfo"></table>-->
+        <table tableName="administrator" domainObjectName="Administrator"></table>
+        <table tableName="key_and_admin" domainObjectName="KeyAndAdmin"></table>
+
 
 
 
