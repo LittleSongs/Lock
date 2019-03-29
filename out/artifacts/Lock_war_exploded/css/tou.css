@@ -1,0 +1,57 @@
+/* CSS Document */
+body{
+	margin:0px;
+	padding:0px;
+	min-height: 100%;
+}
+a{
+	text-decoration:none;
+
+}
+.main_container{
+
+	height: 60px;
+	background: linear-gradient(to bottom, #cbeeff, #f0f8ff,#cbeeff);
+	font-family: "微软雅黑";
+	font-size: 30px;
+	color: red;
+
+}
+.main_container a{
+	color: red;
+}
+/*a标签鼠标移动上的样式*/
+.main_container a:hover{
+	text-decoration:underline;
+}
+.main_container span{
+	font-size:10px;
+}
+.navbar-header,.main_date,.versions{
+	height: 40px;
+	float:left;
+
+}
+/*--版本信息*/
+.versions{
+		margin: 5px 0px 5px 20px;
+}
+/*头部日期*/
+.main_date{
+	height: 40px;
+	margin: 5px 0px 5px 20px;
+}
+/*头像*/
+.portrait{
+
+	float:right;
+	margin: 0px 60px 0px 0px;
+	width:58px;
+	height: auto;
+}
+.tp{
+	border-radius:50%;
+	width:100%;
+	height:auto;
+}
+
