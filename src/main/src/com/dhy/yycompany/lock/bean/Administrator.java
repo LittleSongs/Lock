@@ -1,7 +1,7 @@
 package com.dhy.yycompany.lock.bean;
 
 public class Administrator {
-    private Integer adminId;//阿里斯顿咖啡机奥 i 金额发
+    private Integer adminId;//宋明豫
 
     private String adminUuid;
 
