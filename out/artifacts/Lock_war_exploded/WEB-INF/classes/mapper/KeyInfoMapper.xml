@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dhy.yycompany.lock.dao.KeyInfoMapper">
+  <resultMap id="BaseResultMap" type="com.dhy.yycompany.lock.bean.KeyInfo">
+    <id column="k_id" jdbcType="INTEGER" property="kId" />
+    <result column="k_uuid" jdbcType="VARCHAR" property="kUuid" />
+    <result column="k_lock_id" jdbcType="INTEGER" property="kLockId" />
+    <result column="k_user_id" jdbcType="INTEGER" property="kUserId" />
+    <result column="k_password" jdbcType="VARCHAR" property="kPassword" />
+    <result column="k_available_times" jdbcType="INTEGER" property="kAvailableTimes" />
+    <result column="k_is_modify" jdbcType="INTEGER" property="kIsModify" />
+    <result column="k_delete" jdbcType="INTEGER" property="kDelete" />
+    <result column="k_failure_time" jdbcType="VARCHAR" property="kFailureTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    k_id, k_uuid, k_lock_id, k_user_id, k_password, k_available_times, k_is_modify, k_delete, 
+    k_failure_time
+  </sql>
+  <select id="selectByExample" parameterType="com.dhy.yycompany.lock.bean.KeyInfoExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from key_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from key_info
+    where k_id = #{kId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from key_info
+    where k_id = #{kId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.dhy.yycompany.lock.bean.KeyInfoExample">
+    delete from key_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.dhy.yycompany.lock.bean.KeyInfo">
+    insert into key_info (k_id, k_uuid, k_lock_id, 
+      k_user_id, k_password, k_available_times, 
+      k_is_modify, k_delete, k_failure_time
+      )
+    values (#{kId,jdbcType=INTEGER}, #{kUuid,jdbcType=VARCHAR}, #{kLockId,jdbcType=INTEGER}, 
+      #{kUserId,jdbcType=INTEGER}, #{kPassword,jdbcType=VARCHAR}, #{kAvailableTimes,jdbcType=INTEGER}, 
+      #{kIsModify,jdbcType=INTEGER}, #{kDelete,jdbcType=INTEGER}, #{kFailureTime,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.dhy.yycompany.lock.bean.KeyInfo">
+    insert into key_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="kId != null">
+        k_id,
+      </if>
+      <if test="kUuid != null">
+        k_uuid,
+      </if>
+      <if test="kLockId != null">
+        k_lock_id,
+      </if>
+      <if test="kUserId != null">
+        k_user_id,
+      </if>
+      <if test="kPassword != null">
+        k_password,
+      </if>
+      <if test="kAvailableTimes != null">
+        k_available_times,
+      </if>
+      <if test="kIsModify != null">
+        k_is_modify,
+      </if>
+      <if test="kDelete != null">
+        k_delete,
+      </if>
+      <if test="kFailureTime != null">
+        k_failure_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="kId != null">
+        #{kId,jdbcType=INTEGER},
+      </if>
+      <if test="kUuid != null">
+        #{kUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="kLockId != null">
+        #{kLockId,jdbcType=INTEGER},
+      </if>
+      <if test="kUserId != null">
+        #{kUserId,jdbcType=INTEGER},
+      </if>
+      <if test="kPassword != null">
+        #{kPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="kAvailableTimes != null">
+        #{kAvailableTimes,jdbcType=INTEGER},
+      </if>
+      <if test="kIsModify != null">
+        #{kIsModify,jdbcType=INTEGER},
+      </if>
+      <if test="kDelete != null">
+        #{kDelete,jdbcType=INTEGER},
+      </if>
+      <if test="kFailureTime != null">
+        #{kFailureTime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.dhy.yycompany.lock.bean.KeyInfoExample" resultType="java.lang.Long">
+    select count(*) from key_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update key_info
+    <set>
+      <if test="record.kId != null">
+        k_id = #{record.kId,jdbcType=INTEGER},
+      </if>
+      <if test="record.kUuid != null">
+        k_uuid = #{record.kUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.kLockId != null">
+        k_lock_id = #{record.kLockId,jdbcType=INTEGER},
+      </if>
+      <if test="record.kUserId != null">
+        k_user_id = #{record.kUserId,jdbcType=INTEGER},
+      </if>
+      <if test="record.kPassword != null">
+        k_password = #{record.kPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="record.kAvailableTimes != null">
+        k_available_times = #{record.kAvailableTimes,jdbcType=INTEGER},
+      </if>
+      <if test="record.kIsModify != null">
+        k_is_modify = #{record.kIsModify,jdbcType=INTEGER},
+      </if>
+      <if test="record.kDelete != null">
+        k_delete = #{record.kDelete,jdbcType=INTEGER},
+      </if>
+      <if test="record.kFailureTime != null">
+        k_failure_time = #{record.kFailureTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update key_info
+    set k_id = #{record.kId,jdbcType=INTEGER},
+      k_uuid = #{record.kUuid,jdbcType=VARCHAR},
+      k_lock_id = #{record.kLockId,jdbcType=INTEGER},
+      k_user_id = #{record.kUserId,jdbcType=INTEGER},
+      k_password = #{record.kPassword,jdbcType=VARCHAR},
+      k_available_times = #{record.kAvailableTimes,jdbcType=INTEGER},
+      k_is_modify = #{record.kIsModify,jdbcType=INTEGER},
+      k_delete = #{record.kDelete,jdbcType=INTEGER},
+      k_failure_time = #{record.kFailureTime,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.dhy.yycompany.lock.bean.KeyInfo">
+    update key_info
+    <set>
+      <if test="kUuid != null">
+        k_uuid = #{kUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="kLockId != null">
+        k_lock_id = #{kLockId,jdbcType=INTEGER},
+      </if>
+      <if test="kUserId != null">
+        k_user_id = #{kUserId,jdbcType=INTEGER},
+      </if>
+      <if test="kPassword != null">
+        k_password = #{kPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="kAvailableTimes != null">
+        k_available_times = #{kAvailableTimes,jdbcType=INTEGER},
+      </if>
+      <if test="kIsModify != null">
+        k_is_modify = #{kIsModify,jdbcType=INTEGER},
+      </if>
+      <if test="kDelete != null">
+        k_delete = #{kDelete,jdbcType=INTEGER},
+      </if>
+      <if test="kFailureTime != null">
+        k_failure_time = #{kFailureTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where k_id = #{kId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.dhy.yycompany.lock.bean.KeyInfo">
+    update key_info
+    set k_uuid = #{kUuid,jdbcType=VARCHAR},
+      k_lock_id = #{kLockId,jdbcType=INTEGER},
+      k_user_id = #{kUserId,jdbcType=INTEGER},
+      k_password = #{kPassword,jdbcType=VARCHAR},
+      k_available_times = #{kAvailableTimes,jdbcType=INTEGER},
+      k_is_modify = #{kIsModify,jdbcType=INTEGER},
+      k_delete = #{kDelete,jdbcType=INTEGER},
+      k_failure_time = #{kFailureTime,jdbcType=VARCHAR}
+    where k_id = #{kId,jdbcType=INTEGER}
+  </update>
+</mapper>

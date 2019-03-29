@@ -1,0 +1,311 @@
+.information{
+    float: left;
+    min-height: 300px;
+    width: 84%;
+
+}
+.information_t{
+    /*background-color: aqua;*/
+    text-align:center;
+    margin:0 auto;
+    width:55%;
+}
+.room_name{
+    font-size: 25px;
+    font-family: "微软雅黑";
+}
+.message2{
+    text-align:left;
+    font-size: 15px;
+    font-family: "微软雅黑";
+}
+.butt{
+
+    float: right;
+}
+.butt1{
+
+    float: right;
+    margin: -15px 10px 0px 0px;
+
+}
+.butt2{
+
+    float: right;
+    margin: -25px 10px 0px 0px;
+
+}
+.butt button{
+    margin:0 auto;
+    /*padding: 8px;*/
+    width:40px; /* 宽度 */
+    height: 30px; /* 高度 */
+    border-width: 0px; /* 边框宽度 */
+    border-radius: 3px; /* 边框半径 */
+    background: #68d3ff; /* 背景颜色 */
+    cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+    outline: none; /* 不显示轮廓线 */
+    font-family: Microsoft YaHei; /* 设置字体 */
+    color: white; /* 字体颜色 */
+    font-size: 17px; /* 字体大小 */
+
+
+}
+.butt button:hover { /* 鼠标移入按钮范围时改变颜色 */
+    background: #5599FF;
+}
+.message2::after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+.bd{
+    background-color: #48beff;
+    border-radius:10px 10px;
+}
+.but{
+    margin: 0;
+    padding: 0;
+    border: 1px solid transparent;
+    outline: none;
+}
+.gl{
+    margin:0 auto;
+    /*padding: 8px;*/
+    width:80px; /* 宽度 */
+    height: 25px; /* 高度 */
+    border-width: 0px; /* 边框宽度 */
+    border-radius: 3px; /* 边框半径 */
+    background: #c4ff56; /* 背景颜色 */
+    cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+    outline: none; /* 不显示轮廓线 */
+    font-family: Microsoft YaHei; /* 设置字体 */
+    color: #000000; /* 字体颜色 */
+    margin-top: 15px;
+    font-size: 10px; /* 字体大小 */
+}
+.gl:hover { background: #ffdb75; }
+.sc{
+    text-align:center;
+    background-color: rgba(72, 190, 255, 0);
+    float: right;
+    font-size: 20px;
+    cursor:pointer;
+    margin-top:-10px;
+}
+.tf{
+    background-color: #ffd870;
+}
+.message3s{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top:20px;
+    background-color: #fffdfe;
+    border: 1px solid #0000FF;
+    border-color: rgb(192, 192, 192);
+}
+.message3{
+    background-color: #a4e26a;
+    width: 90%;
+    margin: 10px 15px 20px 30px;
+}
+.form-control{
+    max-width:140px;
+    margin-left: 10px;
+}
+.form-contro2{
+
+}
+.border-input{
+    float: left;
+}
+.message3::before,.message3::after{
+    content: " ";
+    display: table;
+
+}
+.message3::after{
+    clear: both;
+}
+.you{
+    font-family: "微软雅黑";
+    border-radius:10px 10px;
+    padding-top:10px ;
+    padding-left: 10px;
+    width: 90%;
+    margin: 10px 15px 20px 30px;
+    padding-right: 10px;
+}
+
+.ke
+{
+    border-radius:10px 10px;
+    padding-top:10px ;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    width: 90%;
+    margin: 10px 15px 20px 30px;
+}
+
+.message31{
+    background-color: #a4d9ee;
+
+}
+
+.message32{
+    background-color: rgb(192, 192, 192);
+
+}
+
+.jia{
+    cursor:pointer;
+    width: 80px;
+    text-align:center;
+    margin:0 auto;
+
+}
+
+.confirm{
+    cursor:pointer;
+    float: right;
+    font-size: 10px;
+    height: 20px;
+    width: 55px;
+    margin-top: -35px;
+    text-align:center;
+}
+
+/*背景层*/
+#popLayer {
+    position:fixed;
+    display: none;
+    background-color: #B3B3B3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    height: 100%;
+    filter: alpha(opacity=80);/* 只支持IE6、7、8、9 */
+}
+
+/*背景层*/
+#popLayer1 {
+    position:fixed;
+    display: none;
+    background-color: #B3B3B3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    height: 100%;
+    filter: alpha(opacity=80);/* 只支持IE6、7、8、9 */
+}
+
+/*弹出层*/
+#popBox {
+    display: none;
+    background-color: #eaeaea;
+    z-index: 11;
+    width: 300px;
+    height: 400px;
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    margin:auto;
+}
+
+#popBox .close{
+    text-align: right;
+    margin-right: 5px;
+    background-color: #eaeaea;
+}
+
+/*关闭按钮*/
+#popBox .close a {
+    text-decoration: none;
+    color: #2D2C3B;
+}
+
+
+
+
+
+/*弹出层*/
+#xxxx {
+    font-size: 8px;
+    float:right;
+    display: none;
+    background-color: #eaeaea;
+    z-index: 11;
+    width: 160px;
+    height: 120px;
+    position: absolute;
+    top:62px;
+    right: 5px;
+    margin:0px 0px 0px 0px;
+    color: #000000;
+}
+
+#xxxx .close{
+    float: right;
+    text-align: right;
+    margin-right: 5px;
+    margin-top: -20px;
+    background-color: rgba(234, 234, 234, 0);
+    height: 10px;
+}
+
+/*关闭按钮*/
+#xxxx .close a {
+    text-decoration: none;
+    cursor:pointer;
+    color: #2D2C3B;
+}
+
+
+
+
+.content{
+    text-align:center;
+    height:80%;
+}
+
+.xyb{
+    text-align:center;
+    margin:0 50px;
+
+}
+.avatar{
+    margin-top: 20px;
+    height: 70%;
+    width: 70%;
+}
+.xgyzj{
+    width: 50%;
+}
+.yzj{
+    width: 50%;
+}
+.zxx{
+    width: 45%;
+}
+
+.right{
+    float: right;
+}
+.xgzj{
+    margin-left: 20px;
+}
+.zj{
+    margin-top: 50px;
+}
