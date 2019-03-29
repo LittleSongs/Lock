@@ -1,0 +1,196 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>gy公寓</title>
+    <link rel="stylesheet" href="css/tou.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/leftNavigation.css">
+    <link rel="stylesheet" href="css/rightWindow.css">
+    <link rel="stylesheet" href="css/information.css">
+    <link rel="stylesheet" href="css/xin.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/key.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/openjia.js"></script>
+    <script type="text/javascript" src="js/num-alignment.js"></script>
+    <script type="text/javascript" src="js/key.js"></script>
+
+</head>
+
+<body>
+<div class="main_container">
+    <div class="navbar-header">
+        <div class="versions">
+            <a href="#">
+                gy公寓
+                <span>版本v0.1</span>
+            </a>
+        </div>
+        <div class="main_date">
+            <a href="#">1月27日星期日</a>
+        </div>
+    </div>
+    <div class="portrait">
+        <a href="#" >
+            <div class="tx"><img class="tp" src="img/tx1.jpg"></div>
+
+        </a>
+    </div>
+</div>
+
+<!--主体-->
+<div class="main_xia" style="min-height:100%;">
+
+    <!--房态-->
+    <div class="house_status">
+        <!--左导航-->
+        <div class="left_navigation">
+            <ul class="houses">
+                <li>
+                    <a class="house"  href="#"><i class="iconfont">&#xe60f;</i>1号楼<button class="xiugai">修改</button></a>
+
+                    <ul>
+                        <li class="floor"><a href="#">1楼</a></li>
+                        <li class="floor"><a href="#">2楼</a></li>
+                        <li class="floor"><a href="#">3楼</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--右边房间窗口-->
+        <div class="right_window">
+            <div class="card">
+                <a class="ft_card ft" href="index.html">房态</a><span  class="ft"> > </span><a class="ft_card ft"  href="information.html">1号楼1楼1号房</a><span  class="ft"> > </span><a class="ft_card ft"  href="#">门锁状态</a>
+            </div>
+            <div class="information">
+                <div class="information_t">
+                    <div class="room_name">1号楼-1楼-1号房<span id="zt" class="zt">开启</span></div>
+                    <div class="message2 ">
+                        <div class="message3s">
+                            <div class="message3 ke">
+                                <label class="border-input">设备id:</label> <div  >1533447</div>
+                                <br>
+                                <label class="border-input">软件版本:</label> <div>1533447</div>
+                                <br>
+                                <label class="border-input">硬件版本:</label> <div>1533447</div>
+                                <br>
+                                <label  class="border-input">门锁状态:</label><div>关</div>
+                            </div>
+
+                            <div class="mmgl"><div class="kmjl mm">密码管理<span id="xjPassword" class="xin" onclick="popBox()">新&nbsp;建</span></div></div>
+                            <div  class="message31 ke">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <th>密码</th>
+                                    <th>持有者</th>
+                                    <th>密码类型</th>
+                                    <th>密码状态</th>
+                                    </thead>
+                                    <tbody id="neirong">
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>宋明豫</td>
+                                            <td>永久性</td>
+                                            <td>使用中</td>
+                                        </tr>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>马琦钢</td>
+                                            <td>限时型</td>
+                                            <td>时限内</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <nav  class="fenye navs" aria-label="Page navigation">
+                                    <ul class="col-md-offset-4 pagination">
+                                        <li><a class="shouye" onclick="cxs(this.id)">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+                                        <li><a class="shang" onclick="cxs(this.id)">上一页</a></li>
+                                        <li><a class="xia" onclick="cxs(this.id)">下一页</a></li>
+                                        <li><a class="wei" onclick="cxs(this.id)">尾&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+
+                                    </ul>
+
+                                </nav>
+                                <div id="page" class="zxc clearfix">当前1页，总共5页，共25条记录</div>
+                            </div>
+
+                            <div class="kmjl">开门记录</div>
+                            <div  class="message31 ke">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <th>开&nbsp;&nbsp;门&nbsp;&nbsp;者</th>
+                                    <th>联系方式</th>
+                                    <th>操作时间</th>
+                                    <th>开门方式</th>
+                                    </thead>
+                                    <tbody id="operating_srecord">
+                                    <tr>
+                                        <td>宋明豫</td>
+                                        <td>123456</td>
+                                        <td>2019-03-24 13:00:13</td>
+                                        <td>指纹</td>
+                                    </tr>
+                                    <tr>
+                                        <td>马琦钢</td>
+                                        <td>123456</td>
+                                        <td>2019-03-23 13:00:13</td>
+                                        <td>密码</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <nav  class="fenye navs" aria-label="Page navigation">
+                                    <ul class="col-md-offset-4 pagination">
+                                        <li><a class="shouye" onclick="cxs(this.id)">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+                                        <li><a class="shang" onclick="cxs(this.id)">上一页</a></li>
+                                        <li><a class="xia" onclick="cxs(this.id)">下一页</a></li>
+                                        <li><a class="wei" onclick="cxs(this.id)">尾&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+
+                                    </ul>
+
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+
+<div id="popLayer"></div>
+<div id="popBox" class="popBox ke">
+    <div class="close">
+        <a  href="javascript:void(0)" onclick="" class="gb iconfont">&#xe613;</a>
+    </div>
+    <div class="content">
+        <h4>新建密码</h4>
+
+        <label>密码：</label><input  id="name1" class="form-control" type="text">
+        <br/>
+        <br/>
+        <label>密码性质：</label><label><input name="Fruit" onclick="radio1(1)" class="radio1" type="radio" value="1" />时间型 </label>
+        <label><input class="radio1" name="Fruit" onclick="radio1(2)" type="radio" value="2" />次数型 </label>
+        <br/>
+        <br/>
+        <div id="timeX">
+            <label>密码失效时间</label><br/><input id="sxTime" type="datetime-local"  class="form-control" >
+        </div>
+        <div id="numberX" class="number">
+            <label>密码有效次数</label>
+            <input id="2" class="alignment" data-edit="true" value="1"/><br><br>
+        </div>
+    </div>
+    <div class="gb"><div id="b1" class="bd xyb finger">确认</div></div>
+
+</div>
+</body>
+</html>

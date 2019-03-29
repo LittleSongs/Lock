@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!--配置数据库连接信息-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://120.78.7.48/cbec?serverTimezone=UTC"
+                        userId="root"
+                        password="123456">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!--指定javaBean生成的位置-->
+        <javaModelGenerator
+                targetPackage="com.dhy.yycompany.lock.bean"
+                targetProject=".\src">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!--指定sql映射文件生成的位置-->
+        <sqlMapGenerator
+                targetPackage="mapper"
+                targetProject=".\Resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!--指定dao接口生成的位置-->
+        <javaClientGenerator
+                type="XMLMAPPER"
+                targetPackage="com.dhy.yycompany.lock.dao"
+                targetProject=".\src">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!--table指定每个表生成策略-->
+        <!--<table tableName="habit_category" domainObjectName="HabitCategory"></table>-->
+        <!--<table tableName="showcase_category" domainObjectName="ShowcaseCategory"></table>-->
+        <!--<table tableName="favorite_product" domainObjectName="FavoriteProduct"></table>-->
+        <!--<table tableName="comments" domainObjectName="Comments"></table>-->
+        <!--<table tableName="sell_reply" domainObjectName="SellReply"></table>-->
+        <!--<table tableName="users_reply" domainObjectName="UsersReply"></table>-->
+        <!--<table tableName="attribute_name" domainObjectName="AttributeName"></table>-->
+        <!--<table tableName="attribute_value" domainObjectName="AttributeValue"></table>-->
+        <!--<table tableName="price" domainObjectName="Price"></table>-->
+        <!--<table tableName="price" domainObjectName="Price"></table>-->
+        <!--<table tableName="cart" domainObjectName="Cart"></table>-->
+
+        <!--<table tableName="store" domainObjectName="Store"></table>-->
+        <!--<table tableName="favorite_shops" domainObjectName="FavoriteShops"></table>-->
+        <!--<table tableName="borrow_sell" domainObjectName="BorrowSell"></table>-->
+        <!--<table tableName="sell_details" domainObjectName="SellDetails"></table>-->
+        <table tableName="store" domainObjectName="Store"></table>
+
+
+
+    </context>
+
+</generatorConfiguration>

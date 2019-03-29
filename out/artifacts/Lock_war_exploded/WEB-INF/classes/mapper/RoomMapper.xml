@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dhy.yycompany.lock.dao.RoomMapper">
+  <resultMap id="BaseResultMap" type="com.dhy.yycompany.lock.bean.Room">
+    <id column="r_id" jdbcType="INTEGER" property="rId" />
+    <result column="r_uuid" jdbcType="VARCHAR" property="rUuid" />
+    <result column="r_apartment_id" jdbcType="INTEGER" property="rApartmentId" />
+    <result column="r_floor" jdbcType="INTEGER" property="rFloor" />
+    <result column="r_num" jdbcType="VARCHAR" property="rNum" />
+    <result column="r_price" jdbcType="INTEGER" property="rPrice" />
+    <result column="r_resident_num" jdbcType="INTEGER" property="rResidentNum" />
+    <result column="r_lock_id" jdbcType="INTEGER" property="rLockId" />
+    <result column="r_delete" jdbcType="INTEGER" property="rDelete" />
+    <result column="r_modify" jdbcType="INTEGER" property="rModify" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    r_id, r_uuid, r_apartment_id, r_floor, r_num, r_price, r_resident_num, r_lock_id, 
+    r_delete, r_modify
+  </sql>
+  <select id="selectByExample" parameterType="com.dhy.yycompany.lock.bean.RoomExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from room
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from room
+    where r_id = #{rId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from room
+    where r_id = #{rId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.dhy.yycompany.lock.bean.RoomExample">
+    delete from room
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.dhy.yycompany.lock.bean.Room">
+    insert into room (r_id, r_uuid, r_apartment_id, 
+      r_floor, r_num, r_price, 
+      r_resident_num, r_lock_id, r_delete, 
+      r_modify)
+    values (#{rId,jdbcType=INTEGER}, #{rUuid,jdbcType=VARCHAR}, #{rApartmentId,jdbcType=INTEGER}, 
+      #{rFloor,jdbcType=INTEGER}, #{rNum,jdbcType=VARCHAR}, #{rPrice,jdbcType=INTEGER}, 
+      #{rResidentNum,jdbcType=INTEGER}, #{rLockId,jdbcType=INTEGER}, #{rDelete,jdbcType=INTEGER}, 
+      #{rModify,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.dhy.yycompany.lock.bean.Room">
+    insert into room
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="rId != null">
+        r_id,
+      </if>
+      <if test="rUuid != null">
+        r_uuid,
+      </if>
+      <if test="rApartmentId != null">
+        r_apartment_id,
+      </if>
+      <if test="rFloor != null">
+        r_floor,
+      </if>
+      <if test="rNum != null">
+        r_num,
+      </if>
+      <if test="rPrice != null">
+        r_price,
+      </if>
+      <if test="rResidentNum != null">
+        r_resident_num,
+      </if>
+      <if test="rLockId != null">
+        r_lock_id,
+      </if>
+      <if test="rDelete != null">
+        r_delete,
+      </if>
+      <if test="rModify != null">
+        r_modify,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="rId != null">
+        #{rId,jdbcType=INTEGER},
+      </if>
+      <if test="rUuid != null">
+        #{rUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="rApartmentId != null">
+        #{rApartmentId,jdbcType=INTEGER},
+      </if>
+      <if test="rFloor != null">
+        #{rFloor,jdbcType=INTEGER},
+      </if>
+      <if test="rNum != null">
+        #{rNum,jdbcType=VARCHAR},
+      </if>
+      <if test="rPrice != null">
+        #{rPrice,jdbcType=INTEGER},
+      </if>
+      <if test="rResidentNum != null">
+        #{rResidentNum,jdbcType=INTEGER},
+      </if>
+      <if test="rLockId != null">
+        #{rLockId,jdbcType=INTEGER},
+      </if>
+      <if test="rDelete != null">
+        #{rDelete,jdbcType=INTEGER},
+      </if>
+      <if test="rModify != null">
+        #{rModify,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.dhy.yycompany.lock.bean.RoomExample" resultType="java.lang.Long">
+    select count(*) from room
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update room
+    <set>
+      <if test="record.rId != null">
+        r_id = #{record.rId,jdbcType=INTEGER},
+      </if>
+      <if test="record.rUuid != null">
+        r_uuid = #{record.rUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rApartmentId != null">
+        r_apartment_id = #{record.rApartmentId,jdbcType=INTEGER},
+      </if>
+      <if test="record.rFloor != null">
+        r_floor = #{record.rFloor,jdbcType=INTEGER},
+      </if>
+      <if test="record.rNum != null">
+        r_num = #{record.rNum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rPrice != null">
+        r_price = #{record.rPrice,jdbcType=INTEGER},
+      </if>
+      <if test="record.rResidentNum != null">
+        r_resident_num = #{record.rResidentNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.rLockId != null">
+        r_lock_id = #{record.rLockId,jdbcType=INTEGER},
+      </if>
+      <if test="record.rDelete != null">
+        r_delete = #{record.rDelete,jdbcType=INTEGER},
+      </if>
+      <if test="record.rModify != null">
+        r_modify = #{record.rModify,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update room
+    set r_id = #{record.rId,jdbcType=INTEGER},
+      r_uuid = #{record.rUuid,jdbcType=VARCHAR},
+      r_apartment_id = #{record.rApartmentId,jdbcType=INTEGER},
+      r_floor = #{record.rFloor,jdbcType=INTEGER},
+      r_num = #{record.rNum,jdbcType=VARCHAR},
+      r_price = #{record.rPrice,jdbcType=INTEGER},
+      r_resident_num = #{record.rResidentNum,jdbcType=INTEGER},
+      r_lock_id = #{record.rLockId,jdbcType=INTEGER},
+      r_delete = #{record.rDelete,jdbcType=INTEGER},
+      r_modify = #{record.rModify,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.dhy.yycompany.lock.bean.Room">
+    update room
+    <set>
+      <if test="rUuid != null">
+        r_uuid = #{rUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="rApartmentId != null">
+        r_apartment_id = #{rApartmentId,jdbcType=INTEGER},
+      </if>
+      <if test="rFloor != null">
+        r_floor = #{rFloor,jdbcType=INTEGER},
+      </if>
+      <if test="rNum != null">
+        r_num = #{rNum,jdbcType=VARCHAR},
+      </if>
+      <if test="rPrice != null">
+        r_price = #{rPrice,jdbcType=INTEGER},
+      </if>
+      <if test="rResidentNum != null">
+        r_resident_num = #{rResidentNum,jdbcType=INTEGER},
+      </if>
+      <if test="rLockId != null">
+        r_lock_id = #{rLockId,jdbcType=INTEGER},
+      </if>
+      <if test="rDelete != null">
+        r_delete = #{rDelete,jdbcType=INTEGER},
+      </if>
+      <if test="rModify != null">
+        r_modify = #{rModify,jdbcType=INTEGER},
+      </if>
+    </set>
+    where r_id = #{rId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.dhy.yycompany.lock.bean.Room">
+    update room
+    set r_uuid = #{rUuid,jdbcType=VARCHAR},
+      r_apartment_id = #{rApartmentId,jdbcType=INTEGER},
+      r_floor = #{rFloor,jdbcType=INTEGER},
+      r_num = #{rNum,jdbcType=VARCHAR},
+      r_price = #{rPrice,jdbcType=INTEGER},
+      r_resident_num = #{rResidentNum,jdbcType=INTEGER},
+      r_lock_id = #{rLockId,jdbcType=INTEGER},
+      r_delete = #{rDelete,jdbcType=INTEGER},
+      r_modify = #{rModify,jdbcType=INTEGER}
+    where r_id = #{rId,jdbcType=INTEGER}
+  </update>
+</mapper>

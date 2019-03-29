@@ -8,7 +8,7 @@
         </commentGenerator>
         <!--配置数据库连接信息-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql:///lock?serverTimezone=UTC"
+                        connectionURL=" jdbc:mysql://120.79.183.126/lock?serverTimezone=UTC"
                         userId="root"
                         password="Songmingyu123@">
         </jdbcConnection>
