@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dhy.yycompany.lock.dao.VRoomUserLockMapper">
+  <resultMap id="BaseResultMap" type="com.dhy.yycompany.lock.bean.VRoomUserLock">
+    <result column="r_id" jdbcType="INTEGER" property="rId" />
+    <result column="u_id" jdbcType="INTEGER" property="uId" />
+    <result column="l_id" jdbcType="INTEGER" property="lId" />
+    <result column="stay_time" jdbcType="VARCHAR" property="stayTime" />
+    <result column="retreat_time" jdbcType="VARCHAR" property="retreatTime" />
+    <result column="resident_num" jdbcType="INTEGER" property="residentNum" />
+    <result column="l_status" jdbcType="INTEGER" property="lStatus" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    r_id, u_id, l_id, stay_time, retreat_time, resident_num, l_status
+  </sql>
+  <select id="selectByExample" parameterType="com.dhy.yycompany.lock.bean.VRoomUserLockExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from v_room_user_lock
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.dhy.yycompany.lock.bean.VRoomUserLockExample">
+    delete from v_room_user_lock
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.dhy.yycompany.lock.bean.VRoomUserLock">
+    insert into v_room_user_lock (r_id, u_id, l_id, 
+      stay_time, retreat_time, resident_num, 
+      l_status)
+    values (#{rId,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER}, #{lId,jdbcType=INTEGER}, 
+      #{stayTime,jdbcType=VARCHAR}, #{retreatTime,jdbcType=VARCHAR}, #{residentNum,jdbcType=INTEGER}, 
+      #{lStatus,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.dhy.yycompany.lock.bean.VRoomUserLock">
+    insert into v_room_user_lock
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="rId != null">
+        r_id,
+      </if>
+      <if test="uId != null">
+        u_id,
+      </if>
+      <if test="lId != null">
+        l_id,
+      </if>
+      <if test="stayTime != null">
+        stay_time,
+      </if>
+      <if test="retreatTime != null">
+        retreat_time,
+      </if>
+      <if test="residentNum != null">
+        resident_num,
+      </if>
+      <if test="lStatus != null">
+        l_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="rId != null">
+        #{rId,jdbcType=INTEGER},
+      </if>
+      <if test="uId != null">
+        #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="lId != null">
+        #{lId,jdbcType=INTEGER},
+      </if>
+      <if test="stayTime != null">
+        #{stayTime,jdbcType=VARCHAR},
+      </if>
+      <if test="retreatTime != null">
+        #{retreatTime,jdbcType=VARCHAR},
+      </if>
+      <if test="residentNum != null">
+        #{residentNum,jdbcType=INTEGER},
+      </if>
+      <if test="lStatus != null">
+        #{lStatus,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.dhy.yycompany.lock.bean.VRoomUserLockExample" resultType="java.lang.Long">
+    select count(*) from v_room_user_lock
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update v_room_user_lock
+    <set>
+      <if test="record.rId != null">
+        r_id = #{record.rId,jdbcType=INTEGER},
+      </if>
+      <if test="record.uId != null">
+        u_id = #{record.uId,jdbcType=INTEGER},
+      </if>
+      <if test="record.lId != null">
+        l_id = #{record.lId,jdbcType=INTEGER},
+      </if>
+      <if test="record.stayTime != null">
+        stay_time = #{record.stayTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.retreatTime != null">
+        retreat_time = #{record.retreatTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.residentNum != null">
+        resident_num = #{record.residentNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.lStatus != null">
+        l_status = #{record.lStatus,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update v_room_user_lock
+    set r_id = #{record.rId,jdbcType=INTEGER},
+      u_id = #{record.uId,jdbcType=INTEGER},
+      l_id = #{record.lId,jdbcType=INTEGER},
+      stay_time = #{record.stayTime,jdbcType=VARCHAR},
+      retreat_time = #{record.retreatTime,jdbcType=VARCHAR},
+      resident_num = #{record.residentNum,jdbcType=INTEGER},
+      l_status = #{record.lStatus,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

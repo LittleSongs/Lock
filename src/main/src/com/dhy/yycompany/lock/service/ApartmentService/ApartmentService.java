@@ -9,4 +9,7 @@ public interface ApartmentService {
      * @return
      */
     Map<String,String> deleteApartment(int apartmentID);
+    Map<String,String> updateApartment(int apartmentID,String newName);
+    Map<String,String> updateApartmentFloorNum(int apartmentID,int num);
+
 }

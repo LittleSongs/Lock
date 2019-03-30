@@ -64,9 +64,61 @@ public class ApartmentServiceImpl implements ApartmentService {
                 map.put("message","删除公寓楼失败，但是当前公寓内没有存在住户的房屋");
             }
         }
+        sqlSession.commit();
+        sqlSession.close();
         return map;
     }
 
+    @Override
+    public Map<String, String> updateApartment(int apartmentID,String newName) {
+        Map<String, String> map = new HashMap<>();
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        ApartmentMapper apartmentMapper = sqlSession.getMapper(ApartmentMapper.class);
+        Apartment apartment = new Apartment();
+        apartment.setaId(apartmentID);
+        apartment.setaName(newName);
+        int num = apartmentMapper.updateByPrimaryKeySelective(apartment);
+
+        if (num == 1) {
+            System.out.println("update name ok");
+            map.put("result", "0");
+            map.put("message", "成功修改公寓名称");
+        } else {
+            System.out.println("update error");
+            map.put("result", "1");
+            map.put("message", "修改公寓楼名失败");
+        }
+        System.out.println(map);
+        sqlSession.commit();
+        sqlSession.close();
+        return map;
+    }
+
+    @Override
+    public Map<String, String> updateApartmentFloorNum(int apartmentID, int num) {
+
+        Map<String, String> map = new HashMap<>();
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        ApartmentMapper apartmentMapper = sqlSession.getMapper(ApartmentMapper.class);
+        Apartment apartment = new Apartment();
+        apartment.setaId(apartmentID);
+        apartment.setaFloorNum(String.valueOf(num));
+        int num1 = apartmentMapper.updateByPrimaryKeySelective(apartment);
+
+        if (num1 == 1) {
+            System.out.println("update name ok");
+            map.put("result", "0");
+            map.put("message", "成功修改公寓楼层");
+        } else {
+            System.out.println("update error");
+            map.put("result", "1");
+            map.put("message", "修改公寓楼楼层失败");
+        }
+        System.out.println(map);
+        sqlSession.commit();
+        sqlSession.close();
+        return map;
+    }
 
 
 }

@@ -42,6 +42,8 @@ public interface RoomInfoService {
      */
     Map<String,Object> getLockInfo(int lock_id);
 
+    Map<String ,Object> getLockInfoFenye(int lock_id,int pageNum);
+
 
 
     /**
@@ -55,5 +57,9 @@ public interface RoomInfoService {
      * 增加单个房间
      * 提供房间号创建房间
      */
-    Map<String,String> addRoom(int roomNum);
+    Map<String,String> addRoom(String apartmentID,String roomNum);
+
+    /**
+     *
+     */
 }

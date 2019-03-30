@@ -8,6 +8,7 @@ public interface IndexService {
 
     /**
      * list中每个元素的结构
+     *
      * ApartmentID:公寓id
      * ApartmentName:公寓名称
      * Rooms:公寓所有房间信息list

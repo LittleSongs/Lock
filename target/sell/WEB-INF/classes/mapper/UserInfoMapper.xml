@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dhy.yycompany.lock.dao.UserInfoMapper">
+  <resultMap id="BaseResultMap" type="com.dhy.yycompany.lock.bean.UserInfo">
+    <id column="u_id" jdbcType="INTEGER" property="uId" />
+    <result column="u_uuid" jdbcType="VARCHAR" property="uUuid" />
+    <result column="u_room_id" jdbcType="INTEGER" property="uRoomId" />
+    <result column="u_name" jdbcType="VARCHAR" property="uName" />
+    <result column="u_sex" jdbcType="VARCHAR" property="uSex" />
+    <result column="u_id_card" jdbcType="VARCHAR" property="uIdCard" />
+    <result column="u_phone" jdbcType="VARCHAR" property="uPhone" />
+    <result column="u_stay_time" jdbcType="VARCHAR" property="uStayTime" />
+    <result column="u_retreat_time" jdbcType="VARCHAR" property="uRetreatTime" />
+    <result column="u_introduction" jdbcType="VARCHAR" property="uIntroduction" />
+    <result column="u_primary_user" jdbcType="INTEGER" property="uPrimaryUser" />
+    <result column="u_delete" jdbcType="INTEGER" property="uDelete" />
+    <result column="u_is_modify" jdbcType="INTEGER" property="uIsModify" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    u_id, u_uuid, u_room_id, u_name, u_sex, u_id_card, u_phone, u_stay_time, u_retreat_time, 
+    u_introduction, u_primary_user, u_delete, u_is_modify
+  </sql>
+  <select id="selectByExample" parameterType="com.dhy.yycompany.lock.bean.UserInfoExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from user_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_info
+    where u_id = #{uId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user_info
+    where u_id = #{uId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.dhy.yycompany.lock.bean.UserInfoExample">
+    delete from user_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.dhy.yycompany.lock.bean.UserInfo">
+    insert into user_info (u_id, u_uuid, u_room_id, 
+      u_name, u_sex, u_id_card, 
+      u_phone, u_stay_time, u_retreat_time, 
+      u_introduction, u_primary_user, u_delete, 
+      u_is_modify)
+    values (#{uId,jdbcType=INTEGER}, #{uUuid,jdbcType=VARCHAR}, #{uRoomId,jdbcType=INTEGER}, 
+      #{uName,jdbcType=VARCHAR}, #{uSex,jdbcType=VARCHAR}, #{uIdCard,jdbcType=VARCHAR}, 
+      #{uPhone,jdbcType=VARCHAR}, #{uStayTime,jdbcType=VARCHAR}, #{uRetreatTime,jdbcType=VARCHAR}, 
+      #{uIntroduction,jdbcType=VARCHAR}, #{uPrimaryUser,jdbcType=INTEGER}, #{uDelete,jdbcType=INTEGER}, 
+      #{uIsModify,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.dhy.yycompany.lock.bean.UserInfo">
+    insert into user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uId != null">
+        u_id,
+      </if>
+      <if test="uUuid != null">
+        u_uuid,
+      </if>
+      <if test="uRoomId != null">
+        u_room_id,
+      </if>
+      <if test="uName != null">
+        u_name,
+      </if>
+      <if test="uSex != null">
+        u_sex,
+      </if>
+      <if test="uIdCard != null">
+        u_id_card,
+      </if>
+      <if test="uPhone != null">
+        u_phone,
+      </if>
+      <if test="uStayTime != null">
+        u_stay_time,
+      </if>
+      <if test="uRetreatTime != null">
+        u_retreat_time,
+      </if>
+      <if test="uIntroduction != null">
+        u_introduction,
+      </if>
+      <if test="uPrimaryUser != null">
+        u_primary_user,
+      </if>
+      <if test="uDelete != null">
+        u_delete,
+      </if>
+      <if test="uIsModify != null">
+        u_is_modify,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uId != null">
+        #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="uUuid != null">
+        #{uUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="uRoomId != null">
+        #{uRoomId,jdbcType=INTEGER},
+      </if>
+      <if test="uName != null">
+        #{uName,jdbcType=VARCHAR},
+      </if>
+      <if test="uSex != null">
+        #{uSex,jdbcType=VARCHAR},
+      </if>
+      <if test="uIdCard != null">
+        #{uIdCard,jdbcType=VARCHAR},
+      </if>
+      <if test="uPhone != null">
+        #{uPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="uStayTime != null">
+        #{uStayTime,jdbcType=VARCHAR},
+      </if>
+      <if test="uRetreatTime != null">
+        #{uRetreatTime,jdbcType=VARCHAR},
+      </if>
+      <if test="uIntroduction != null">
+        #{uIntroduction,jdbcType=VARCHAR},
+      </if>
+      <if test="uPrimaryUser != null">
+        #{uPrimaryUser,jdbcType=INTEGER},
+      </if>
+      <if test="uDelete != null">
+        #{uDelete,jdbcType=INTEGER},
+      </if>
+      <if test="uIsModify != null">
+        #{uIsModify,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.dhy.yycompany.lock.bean.UserInfoExample" resultType="java.lang.Long">
+    select count(*) from user_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update user_info
+    <set>
+      <if test="record.uId != null">
+        u_id = #{record.uId,jdbcType=INTEGER},
+      </if>
+      <if test="record.uUuid != null">
+        u_uuid = #{record.uUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uRoomId != null">
+        u_room_id = #{record.uRoomId,jdbcType=INTEGER},
+      </if>
+      <if test="record.uName != null">
+        u_name = #{record.uName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uSex != null">
+        u_sex = #{record.uSex,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uIdCard != null">
+        u_id_card = #{record.uIdCard,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uPhone != null">
+        u_phone = #{record.uPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uStayTime != null">
+        u_stay_time = #{record.uStayTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uRetreatTime != null">
+        u_retreat_time = #{record.uRetreatTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uIntroduction != null">
+        u_introduction = #{record.uIntroduction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uPrimaryUser != null">
+        u_primary_user = #{record.uPrimaryUser,jdbcType=INTEGER},
+      </if>
+      <if test="record.uDelete != null">
+        u_delete = #{record.uDelete,jdbcType=INTEGER},
+      </if>
+      <if test="record.uIsModify != null">
+        u_is_modify = #{record.uIsModify,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update user_info
+    set u_id = #{record.uId,jdbcType=INTEGER},
+      u_uuid = #{record.uUuid,jdbcType=VARCHAR},
+      u_room_id = #{record.uRoomId,jdbcType=INTEGER},
+      u_name = #{record.uName,jdbcType=VARCHAR},
+      u_sex = #{record.uSex,jdbcType=VARCHAR},
+      u_id_card = #{record.uIdCard,jdbcType=VARCHAR},
+      u_phone = #{record.uPhone,jdbcType=VARCHAR},
+      u_stay_time = #{record.uStayTime,jdbcType=VARCHAR},
+      u_retreat_time = #{record.uRetreatTime,jdbcType=VARCHAR},
+      u_introduction = #{record.uIntroduction,jdbcType=VARCHAR},
+      u_primary_user = #{record.uPrimaryUser,jdbcType=INTEGER},
+      u_delete = #{record.uDelete,jdbcType=INTEGER},
+      u_is_modify = #{record.uIsModify,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.dhy.yycompany.lock.bean.UserInfo">
+    update user_info
+    <set>
+      <if test="uUuid != null">
+        u_uuid = #{uUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="uRoomId != null">
+        u_room_id = #{uRoomId,jdbcType=INTEGER},
+      </if>
+      <if test="uName != null">
+        u_name = #{uName,jdbcType=VARCHAR},
+      </if>
+      <if test="uSex != null">
+        u_sex = #{uSex,jdbcType=VARCHAR},
+      </if>
+      <if test="uIdCard != null">
+        u_id_card = #{uIdCard,jdbcType=VARCHAR},
+      </if>
+      <if test="uPhone != null">
+        u_phone = #{uPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="uStayTime != null">
+        u_stay_time = #{uStayTime,jdbcType=VARCHAR},
+      </if>
+      <if test="uRetreatTime != null">
+        u_retreat_time = #{uRetreatTime,jdbcType=VARCHAR},
+      </if>
+      <if test="uIntroduction != null">
+        u_introduction = #{uIntroduction,jdbcType=VARCHAR},
+      </if>
+      <if test="uPrimaryUser != null">
+        u_primary_user = #{uPrimaryUser,jdbcType=INTEGER},
+      </if>
+      <if test="uDelete != null">
+        u_delete = #{uDelete,jdbcType=INTEGER},
+      </if>
+      <if test="uIsModify != null">
+        u_is_modify = #{uIsModify,jdbcType=INTEGER},
+      </if>
+    </set>
+    where u_id = #{uId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.dhy.yycompany.lock.bean.UserInfo">
+    update user_info
+    set u_uuid = #{uUuid,jdbcType=VARCHAR},
+      u_room_id = #{uRoomId,jdbcType=INTEGER},
+      u_name = #{uName,jdbcType=VARCHAR},
+      u_sex = #{uSex,jdbcType=VARCHAR},
+      u_id_card = #{uIdCard,jdbcType=VARCHAR},
+      u_phone = #{uPhone,jdbcType=VARCHAR},
+      u_stay_time = #{uStayTime,jdbcType=VARCHAR},
+      u_retreat_time = #{uRetreatTime,jdbcType=VARCHAR},
+      u_introduction = #{uIntroduction,jdbcType=VARCHAR},
+      u_primary_user = #{uPrimaryUser,jdbcType=INTEGER},
+      u_delete = #{uDelete,jdbcType=INTEGER},
+      u_is_modify = #{uIsModify,jdbcType=INTEGER}
+    where u_id = #{uId,jdbcType=INTEGER}
+  </update>
+</mapper>

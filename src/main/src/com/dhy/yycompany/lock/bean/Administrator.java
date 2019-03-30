@@ -1,7 +1,7 @@
 package com.dhy.yycompany.lock.bean;
 
 public class Administrator {
-    private Integer adminId;//宋明豫1234567
+    private Integer adminId;//宋明豫123456
 
     private String adminUuid;
 
