@@ -1,21 +1,23 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>gy公寓</title>
-<link rel="stylesheet" href="css/tou.css">
-    <link rel="stylesheet" href="css/iconfont.css">
-    <link rel="stylesheet" href="css/leftNavigation.css">
-    <link rel="stylesheet" href="css/rightWindow.css">
-    <link rel="stylesheet" href="css/card.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/information.css">
-    <link rel="stylesheet" href="css/tc.css">
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../../css/tou.css">
+    <link rel="stylesheet" href="../../css/iconfont.css">
+    <link rel="stylesheet" href="../../css/leftNavigation.css">
+    <link rel="stylesheet" href="../../css/rightWindow.css">
+    <link rel="stylesheet" href="../../css/font.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/information.css">
+    <link rel="stylesheet" href="../../css/tc.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/tc.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+    <script type="text/javascript" src="../../js/tc.js"></script>
 </head>
 
 <body>
@@ -33,7 +35,7 @@
     </div>
     <div class="portrait" onmousemove="popBox2()" >
         <a href="#" on>
-            <div class="tx"><img class="tp" src="img/tx1.jpg"></div>
+            <div class="tx"><img class="tp" src="../../img/tx1.jpg"></div>
 
         </a>
         <!--角色详细信息弹窗-->
@@ -77,7 +79,7 @@
         <!--右边房间窗口-->
         <div class="right_window">
             <div class="card">
-                <a class="ft_card ft" href="index.html">房态</a>
+                <a class="ft_card ft" href="index.jsp">房态</a>
             </div>
             <div>
                 <div class="bean">

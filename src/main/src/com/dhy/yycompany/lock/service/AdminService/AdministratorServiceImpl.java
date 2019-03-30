@@ -1,6 +1,8 @@
 package com.dhy.yycompany.lock.service.AdminService;
 
+import com.dhy.yycompany.lock.bean.Administrator;
 import com.dhy.yycompany.lock.bean.KeyInfo;
+import com.dhy.yycompany.lock.dao.AdministratorMapper;
 import com.dhy.yycompany.lock.dao.KeyInfoMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -39,5 +41,12 @@ public class AdministratorServiceImpl implements AdministratorService {
             System.out.println("添加密码失败");
             return 1;
         }
+    }
+
+    public Administrator GetAdminMessage(int id){
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        AdministratorMapper administratorMapper = sqlSession.getMapper(AdministratorMapper.class);
+        Administrator administrator = administratorMapper.selectByPrimaryKey(id);
+        return administrator;
     }
 }

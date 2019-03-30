@@ -31,7 +31,7 @@ var b=2;
         if(b!=5) {
             var tet = "<div id=\"b" + b + "\" class=\"bd xyb finger\">下一步</div>";
         }else {
-            var tet = "<a href='index.html'><div  id=\"b" + b + "\" class=\"bd xyb finger\">完成</div></a>";
+            var tet = "<a href='index.jsp'><div  id=\"b" + b + "\" class=\"bd xyb finger\">完成</div></a>";
         }
         if(b<6) {
             $("#ks").empty();
