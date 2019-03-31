@@ -2,6 +2,7 @@ package com.dhy.yycompany.lock.test;
 
 import com.dhy.yycompany.lock.service.AdminService.AdministratorService;
 import com.dhy.yycompany.lock.service.ApartmentService.ApartmentService;
+import com.dhy.yycompany.lock.service.UserService.UserService;
 import com.dhy.yycompany.lock.service.indexService.IndexService;
 import com.dhy.yycompany.lock.service.roomInfoService.RoomInfoService;
 import com.dhy.yycompany.lock.service.testService.TestService;
@@ -113,6 +114,19 @@ public class ImplTest {
         ApartmentService apartmentService = (ApartmentService) context.getBean("apartmentServiceImpl");
         apartmentService.updateApartmentFloorNum(3,20);
     }
+
+
+    /**
+     * 用户退宿功能：住户表删除住户，对应的room表住户数减1，住户对应的开门密码表的信息需要删除，指令表增加删除密码指令，让树莓派更新密码表。
+     */
+    @Test
+    public void deleteUser(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserService userService=(UserService) context.getBean("userServiceImpl");
+        userService.deleteUser(50);
+    }
+
+
 
 
 

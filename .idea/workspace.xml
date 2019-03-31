@@ -6,7 +6,19 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd6eb95b-292e-406c-aaee-076494d8588c" name="Default Changelist" comment="" />
+    <list default="true" id="fd6eb95b-292e-406c-aaee-076494d8588c" name="Default Changelist" comment="de">
+      <change afterPath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/UserService/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/UserService/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/mapper/RoomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/mapper/RoomMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/dao/RoomMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/dao/RoomMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/dao/RoomMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/dao/RoomMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/service/AdminService/AdministratorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/service/AdminService/AdministratorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/service/AdminService/AdministratorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/service/AdminService/AdministratorServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/test/ImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/test/ImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/RoomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/RoomMapper.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,10 +33,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/testService/TestService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/Resources/mapper/RoomMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="25" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="25" />
+            <state relative-caret-position="452">
+              <caret line="294" column="22" lean-forward="true" selection-start-line="294" selection-start-column="22" selection-end-line="294" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -32,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="104" column="41" lean-forward="true" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="41" />
+            <state relative-caret-position="537">
+              <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,10 +54,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Resources/test.txt">
+        <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/UserService/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+            <state relative-caret-position="190">
+              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/dao/RoomMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="26" column="49" lean-forward="true" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/UserService/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="35" column="71" selection-start-line="35" selection-start-column="71" selection-end-line="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,8 +155,13 @@
         <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/AdminService/AdministratorService.java" />
         <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/AdminService/AdministratorServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/test.txt" />
+        <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/UserService/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/dao/UserInfoMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/Resources/mapper/RoomMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/dao/RoomMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/UserService/UserServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -141,7 +179,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="830" />
@@ -177,6 +215,21 @@
               <item name="Lock" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -186,6 +239,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lock" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lock" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lock" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
@@ -203,7 +274,75 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lock" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="AdminService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lock" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="ApartmentService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lock" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="indexService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lock" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="roomInfoService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lock" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="testService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lock" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -228,19 +367,20 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.dhy.yycompany.lock.service.ApartmentService" />
-      <recent name="com.dhy.yycompany.lock.service.adminService" />
-      <recent name="com.dhy.yycompany.lock.service.roomInfoService" />
-      <recent name="com.dhy.yycompany.lock.service.indexService" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.dhy.yycompany.lock.test" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="F:\ruanjian\keyidea\Lock" />
       <recent name="F:\ruanjian\keyidea\Lock\src\main\Resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.dhy.yycompany.lock.test" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.dhy.yycompany.lock.service.UserService" />
+      <recent name="com.dhy.yycompany.lock.service.ApartmentService" />
+      <recent name="com.dhy.yycompany.lock.service.adminService" />
+      <recent name="com.dhy.yycompany.lock.service.roomInfoService" />
+      <recent name="com.dhy.yycompany.lock.service.indexService" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -254,6 +394,107 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ImplTest.deleteUser">
+    <configuration name="ImplTest.deleteUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lock" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
+      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
+      <option name="METHOD_NAME" value="deleteUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="MakeNoErrorCheck" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 7.0.91" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.91" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Lock_war_exploded/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Lock:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Lock_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Lock_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52279" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Lock:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.ImplTest.deleteUser" />
+      <item itemvalue="Tomcat Server.Tomcat 7.0.91" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ImplTest.deleteUser" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -289,7 +530,7 @@
       <workItem from="1553945791815" duration="373000" />
       <workItem from="1553946639040" duration="9218000" />
       <workItem from="1553997776466" duration="537000" />
-      <workItem from="1554003575533" duration="253000" />
+      <workItem from="1554003575533" duration="5231000" />
     </task>
     <task id="LOCAL-00001" summary="实现了主界面的公寓和房间信息展示">
       <created>1553439051396</created>
@@ -365,68 +606,68 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ImplTest_getLockInfoFenye - 2019.03.30 at 21h 54m 40s.xml">
-      <configuration name="ImplTest.getLockInfoFenye" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ImplTest_getLockInfoFenye - 2019.03.30 at 21h 56m 14s.xml">
-      <configuration name="ImplTest.getLockInfoFenye" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ImplTest_getLockInfoFenye - 2019.03.30 at 21h 58m 41s.xml">
-      <configuration name="ImplTest.getLockInfoFenye" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ImplTest_getLockInfoFenye - 2019.03.30 at 22h 04m 42s.xml">
-      <configuration name="ImplTest.getLockInfoFenye" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ImplTest_getLockInfoFenye - 2019.03.30 at 22h 05m 49s.xml">
-      <configuration name="ImplTest.getLockInfoFenye" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ImplTest_getLockInfoFenye - 2019.03.30 at 22h 07m 35s.xml">
-      <configuration name="ImplTest.getLockInfoFenye" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ImplTest_getLockInfoFenye - 2019.03.30 at 22h 08m 42s.xml">
-      <configuration name="ImplTest.getLockInfoFenye" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ImplTest_getLockInfoFenye - 2019.03.30 at 22h 09m 35s.xml">
-      <configuration name="ImplTest.getLockInfoFenye" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ImplTest_getLockInfoFenye - 2019.03.30 at 22h 10m 16s.xml">
-      <configuration name="ImplTest.getLockInfoFenye" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ImplTest_getLockInfoFenye - 2019.03.30 at 22h 15m 23s.xml">
       <configuration name="ImplTest.getLockInfoFenye" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ImplTest_deleteUser - 2019.03.31 at 12h 42m 06s.xml">
+      <configuration name="ImplTest.deleteUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ImplTest_deleteUser - 2019.03.31 at 12h 47m 45s.xml">
+      <configuration name="ImplTest.deleteUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ImplTest_deleteUser - 2019.03.31 at 12h 49m 57s.xml">
+      <configuration name="ImplTest.deleteUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ImplTest_deleteUser - 2019.03.31 at 12h 52m 27s.xml">
+      <configuration name="ImplTest.deleteUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ImplTest_deleteUser - 2019.03.31 at 12h 52m 36s.xml">
+      <configuration name="ImplTest.deleteUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ImplTest_deleteUser - 2019.03.31 at 12h 53m 10s.xml">
+      <configuration name="ImplTest.deleteUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ImplTest_deleteUser - 2019.03.31 at 12h 55m 45s.xml">
+      <configuration name="ImplTest.deleteUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ImplTest_deleteUser - 2019.03.31 at 12h 58m 19s.xml">
+      <configuration name="ImplTest.deleteUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ImplTest_deleteUser - 2019.03.31 at 12h 59m 47s.xml">
+      <configuration name="ImplTest.deleteUser" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82074000" />
+    <option name="totallyTimeSpent" value="87052000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1010" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Structure" order="0" sideWeight="0.5008537" side_tool="true" weight="0.25722542" />
+      <window_info id="Structure" order="0" sideWeight="0.50217867" side_tool="true" weight="0.22736955" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49914628" visible="true" weight="0.22736955" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.49782136" visible="true" weight="0.30543634" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2844141" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2804878" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39972898" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3292683" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3292683" />
       <window_info anchor="bottom" id="Sequence" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3292683" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3292683" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32897604" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="15" visible="true" weight="0.47930282" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.41394335" />
       <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
       <window_info anchor="bottom" id="Statistic" order="17" weight="0.3292683" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -501,14 +742,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/controller/cx.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="280" selection-start-line="280" selection-end-line="280" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -556,32 +789,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/ListComparator.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/mapper/RoomMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="181" column="11" lean-forward="true" selection-start-line="181" selection-start-column="11" selection-end-line="181" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/SortList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/jshell/jshell_console.snippet">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/bean/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="143" column="52" selection-start-line="143" selection-start-column="52" selection-end-line="143" selection-end-column="52" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/bean/LockInfo.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -594,13 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2470">
           <caret line="202" selection-start-line="202" selection-end-line="202" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/bean/VDailyUserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="184" column="18" selection-start-line="184" selection-start-column="18" selection-end-line="184" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -651,13 +853,6 @@
             <element signature="e#1055#1056#0" expanded="true" />
             <element signature="e#1100#1101#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/mapper/AdministratorMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -755,33 +950,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="177" column="39" lean-forward="true" selection-start-line="177" selection-start-column="39" selection-end-line="177" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/AdminService/AdministratorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/AdminService/AdministratorServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/testService/TestService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -796,10 +964,130 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/AdminService/AdministratorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/AdminService/AdministratorServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="257" column="41" lean-forward="true" selection-start-line="256" selection-start-column="12" selection-end-line="257" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/bean/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="143" column="52" selection-start-line="143" selection-start-column="52" selection-end-line="143" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/bean/UserInfoExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14632">
+          <caret line="172" column="23" selection-start-line="172" selection-start-column="23" selection-end-line="172" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/SortList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/mapper/AdministratorMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4071">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/bean/VDailyUserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="184" column="18" selection-start-line="184" selection-start-column="18" selection-end-line="184" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/bean/VDailyUserInfoExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24591">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/dao/VDailyUserInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/mapper/UserInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/dao/UserInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/mapper/RoomMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="294" column="22" lean-forward="true" selection-start-line="294" selection-start-column="22" selection-end-line="294" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/dao/RoomMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="26" column="49" lean-forward="true" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/UserService/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/UserService/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="35" column="71" selection-start-line="35" selection-start-column="71" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="104" column="41" lean-forward="true" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="41" />
+        <state relative-caret-position="537">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

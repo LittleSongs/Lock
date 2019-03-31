@@ -288,4 +288,10 @@
       r_modify = #{rModify,jdbcType=INTEGER}
     where r_id = #{rId,jdbcType=INTEGER}
   </update>
+
+    <update id="deleteUserByPrimaryKey" parameterType="com.dhy.yycompany.lock.bean.Room">
+        update room
+        set r_resident_num=r_resident_num-1
+        where r_id=#{rId,jdbcType=INTEGER}
+    </update>
 </mapper>

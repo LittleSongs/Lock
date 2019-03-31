@@ -27,4 +27,5 @@ public interface RoomMapper {
     int updateByPrimaryKeySelective(Room record);
 
     int updateByPrimaryKey(Room record);
+    int deleteUserByPrimaryKey(@Param("rId") int rId);
 }
