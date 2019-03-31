@@ -6,10 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd6eb95b-292e-406c-aaee-076494d8588c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/test.txt" afterDir="false" />
-    </list>
+    <list default="true" id="fd6eb95b-292e-406c-aaee-076494d8588c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -479,7 +476,7 @@
       <workItem from="1553945726434" duration="37000" />
       <workItem from="1553945791815" duration="373000" />
       <workItem from="1553946639040" duration="9218000" />
-      <workItem from="1553997776466" duration="261000" />
+      <workItem from="1553997776466" duration="537000" />
     </task>
     <task id="LOCAL-00001" summary="实现了主界面的公寓和房间信息展示">
       <created>1553439051396</created>
@@ -537,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553863698544</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="修改了首页展示所有公寓和房间信息的getApartments方法&#10;增加了删除公寓楼方法&#10;增加了删除单个房间&#10;增加了修改公寓楼名称&#10;增加了修改公寓楼层数&#10;&#10;&#10;明天写用户退宿功能：住户表删除住户，对应的room表住户数减1，住户对应的开门密码表的信息需要删除，指令表增加删除密码指令，让树莓派更新密码表。">
+      <created>1553998167659</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1553998167661</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -573,11 +577,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81430000" />
+    <option name="totallyTimeSpent" value="81706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="830" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5008537" side_tool="true" weight="0.25722542" />
       <window_info id="Designer" order="1" />
@@ -596,7 +599,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3292683" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.329539" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3292683" />
       <window_info anchor="bottom" id="Sequence" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3292683" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3292683" />
