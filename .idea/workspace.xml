@@ -16,8 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -30,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1938">
-              <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+            <state relative-caret-position="48">
+              <caret line="94" column="31" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/test.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
-              <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -179,13 +178,6 @@
               <item name="Lock" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -195,6 +187,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lock" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lock" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
@@ -204,21 +205,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lock" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -268,180 +254,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="RunManager" selected="JUnit.ImplTest.getLockInfoFenye">
-    <configuration name="ImplTest.deleteRoom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lock" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
-      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
-      <option name="METHOD_NAME" value="deleteRoom" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImplTest.getApartments (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lock" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
-      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
-      <option name="METHOD_NAME" value="getApartments" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImplTest.getLockInfoFenye" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lock" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
-      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
-      <option name="METHOD_NAME" value="getLockInfoFenye" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImplTest.updateApartmentFloorNum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lock" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
-      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
-      <option name="METHOD_NAME" value="updateApartmentFloorNum" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImplTest.updateApartmentName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lock" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
-      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
-      <option name="METHOD_NAME" value="updateApartmentName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.91" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Lock_war_exploded/" />
-      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="Lock:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/Lock_war_exploded" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Lock" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="60221" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="sell:war exploded" />
-          <artifact name="Lock:war exploded" />
-        </option>
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="JUnit.ImplTest.deleteRoom" />
-      <item itemvalue="JUnit.ImplTest.getApartments (1)" />
-      <item itemvalue="JUnit.ImplTest.updateApartmentName" />
-      <item itemvalue="JUnit.ImplTest.updateApartmentFloorNum" />
-      <item itemvalue="JUnit.ImplTest.getLockInfoFenye" />
-      <item itemvalue="Tomcat Server.Unnamed" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.ImplTest.getLockInfoFenye" />
-        <item itemvalue="JUnit.ImplTest.updateApartmentFloorNum" />
-        <item itemvalue="JUnit.ImplTest.updateApartmentName" />
-        <item itemvalue="JUnit.ImplTest.getApartments (1)" />
-        <item itemvalue="JUnit.ImplTest.deleteRoom" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -577,10 +389,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81706000" />
+    <option name="totallyTimeSpent" value="81821000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="830" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1010" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5008537" side_tool="true" weight="0.25722542" />
       <window_info id="Designer" order="1" />
@@ -589,7 +402,7 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49914628" visible="true" weight="0.30829757" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.49914628" visible="true" weight="0.22949947" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2844141" />
@@ -605,7 +418,7 @@
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3292683" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="15" visible="true" weight="0.46205962" />
+      <window_info anchor="bottom" id="Version Control" order="15" visible="true" weight="0.45969498" />
       <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
       <window_info anchor="bottom" id="Statistic" order="17" weight="0.3292683" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -969,8 +782,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+        <state relative-caret-position="48">
+          <caret line="94" column="31" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -980,7 +793,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/Resources/test.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
-          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
         </state>
       </provider>
     </entry>
