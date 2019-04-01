@@ -309,6 +309,86 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.ImplTest.addRoom">
+    <configuration name="ImplTest.addRoom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lock" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
+      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
+      <option name="METHOD_NAME" value="addRoom" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImplTest.deleteAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lock" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
+      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
+      <option name="METHOD_NAME" value="deleteAdmin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImplTest.getAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lock" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
+      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
+      <option name="METHOD_NAME" value="getAdmin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImplTest.getAdmins" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lock" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
+      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
+      <option name="METHOD_NAME" value="getAdmins" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImplTest.modifyPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lock" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
+      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
+      <option name="METHOD_NAME" value="modifyPrice" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.ImplTest.getAdmin" />
       <item itemvalue="JUnit.ImplTest.getAdmins" />
