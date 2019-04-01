@@ -6,5 +6,6 @@ public interface AdministratorService {
 
     //管理员生成密码
     int addkey(Map<String ,String> map);
+    Map<String,String> modifyAdminInfo(int adminID,String password,String newName);
 
 }

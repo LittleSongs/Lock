@@ -104,7 +104,8 @@
         <!--<table tableName="key_info" domainObjectName="KeyInfo"></table>-->
         <!--<table tableName="lock_info" domainObjectName="LockInfo"></table>-->
         <table tableName="administrator" domainObjectName="Administrator"></table>
-        <table tableName="key_and_admin" domainObjectName="KeyAndAdmin"></table>
+<!--        <table tableName="key_and_admin" domainObjectName="KeyAndAdmin"></table>-->
+<!--        <table tableName="instruction" domainObjectName="Instruction"></table>-->
 
 
 

@@ -123,8 +123,20 @@ public class ImplTest {
     public void deleteUser(){
         ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
         UserService userService=(UserService) context.getBean("userServiceImpl");
-        userService.deleteUser(50);
+        userService.deleteUser(22);
     }
+
+    /**
+     * 修改管理员信息
+     */
+    @Test
+    public void modifyAdmin(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        AdministratorService administratorService = (AdministratorService) context.getBean("administratorServiceImpl");
+        administratorService.modifyAdminInfo(1,"qqq","aaa");
+    }
+
+
 
 
 
