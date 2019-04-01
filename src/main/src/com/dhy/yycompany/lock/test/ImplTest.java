@@ -175,4 +175,19 @@ public class ImplTest {
         AdministratorService administratorService = (AdministratorService) context.getBean("administratorServiceImpl");
         administratorService.deleteAdmin(2);
     }
+
+    //增删房间界面，获取某楼层的所有房间号
+    @Test
+    public void getRoomsNum(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        RoomInfoService roomInfoService = (RoomInfoService) context.getBean("roomInfoServiceImpl");
+        roomInfoService.getRoomsNum(2,1);
+    }
+
+
+    //添加户主功能
+    @Test
+    public void addHomeMaster(){
+
+    }
 }

@@ -1,5 +1,7 @@
 package com.dhy.yycompany.lock.service.roomInfoService;
 
+import com.alibaba.fastjson.JSON;
+
 import java.util.Map;
 
 public interface RoomInfoService {
@@ -63,4 +65,12 @@ public interface RoomInfoService {
      *修改房间租金
      */
     Map<String,String> modifyPrice(int roomID,int price);
+
+    /**
+     * 增删房间界面，获得楼层中所有房间的信息，参数 （公寓楼id， 楼层）
+     * @param apartmentID
+     * @param floor
+     * @return
+     */
+    JSON getRoomsNum(int apartmentID,int floor);
 }

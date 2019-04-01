@@ -13,10 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 @Transactional
@@ -304,5 +301,32 @@ public class RoomInfoServiceImpl implements RoomInfoService {
         }
         return map;
     }
+
+    @Override
+    public JSON getRoomsNum(int apartmentID, int floor) {
+        SqlSession sqlSession=sqlSessionFactory.openSession();
+        RoomExample roomExample=new RoomExample();
+        RoomExample.Criteria criteria=roomExample.createCriteria();
+        criteria.andRApartmentIdEqualTo(apartmentID).andRFloorEqualTo(floor);
+        RoomMapper roomMapper=sqlSession.getMapper(RoomMapper.class);
+        List<Room> rooms=roomMapper.selectByExample(roomExample);
+        Collections.sort(rooms, new Comparator<Room>() {
+            @Override
+            public int compare(Room o1, Room o2) {
+                // TODO Auto-generated method stub
+                if (o1.getrNumInt() < o2.getrNumInt()) {
+                    return -1;
+                }
+                if (o1.getrNumInt() == o2.getrNumInt())
+                    return 0;
+                return 1;
+            }
+        });
+
+        JSON  toJSON= (JSON) JSONArray.toJSON(rooms);
+        System.out.println("json="+toJSON);
+        return toJSON;
+    }
+
 
 }
