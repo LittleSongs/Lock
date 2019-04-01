@@ -127,7 +127,7 @@ public class ImplTest {
     }
 
     /**
-     * 修改管理员信息
+     * 修改管理员信息11
      */
     @Test
     public void modifyAdmin(){
