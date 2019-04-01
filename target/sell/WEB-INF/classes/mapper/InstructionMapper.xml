@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dhy.yycompany.lock.dao.InstructionMapper">
+  <resultMap id="BaseResultMap" type="com.dhy.yycompany.lock.bean.Instruction">
+    <id column="i_id" jdbcType="INTEGER" property="iId" />
+    <result column="i_uuid" jdbcType="VARCHAR" property="iUuid" />
+    <result column="i_lock_id" jdbcType="INTEGER" property="iLockId" />
+    <result column="i_user_id" jdbcType="INTEGER" property="iUserId" />
+    <result column="i_is_delete" jdbcType="INTEGER" property="iIsDelete" />
+    <result column="i_is_modify" jdbcType="INTEGER" property="iIsModify" />
+    <result column="i_is_user" jdbcType="INTEGER" property="iIsUser" />
+    <result column="i_is_lock" jdbcType="INTEGER" property="iIsLock" />
+    <result column="i_is_key" jdbcType="INTEGER" property="iIsKey" />
+    <result column="i_is_finger" jdbcType="INTEGER" property="iIsFinger" />
+    <result column="i_user_info" jdbcType="VARCHAR" property="iUserInfo" />
+    <result column="i_lock_info" jdbcType="VARCHAR" property="iLockInfo" />
+    <result column="i_key_info" jdbcType="VARCHAR" property="iKeyInfo" />
+    <result column="i_finger_info" jdbcType="VARCHAR" property="iFingerInfo" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    i_id, i_uuid, i_lock_id, i_user_id, i_is_delete, i_is_modify, i_is_user, i_is_lock, 
+    i_is_key, i_is_finger, i_user_info, i_lock_info, i_key_info, i_finger_info
+  </sql>
+  <select id="selectByExample" parameterType="com.dhy.yycompany.lock.bean.InstructionExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from instruction
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from instruction
+    where i_id = #{iId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from instruction
+    where i_id = #{iId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.dhy.yycompany.lock.bean.InstructionExample">
+    delete from instruction
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.dhy.yycompany.lock.bean.Instruction">
+    insert into instruction (i_id, i_uuid, i_lock_id, 
+      i_user_id, i_is_delete, i_is_modify, 
+      i_is_user, i_is_lock, i_is_key, 
+      i_is_finger, i_user_info, i_lock_info, 
+      i_key_info, i_finger_info)
+    values (#{iId,jdbcType=INTEGER}, #{iUuid,jdbcType=VARCHAR}, #{iLockId,jdbcType=INTEGER}, 
+      #{iUserId,jdbcType=INTEGER}, #{iIsDelete,jdbcType=INTEGER}, #{iIsModify,jdbcType=INTEGER}, 
+      #{iIsUser,jdbcType=INTEGER}, #{iIsLock,jdbcType=INTEGER}, #{iIsKey,jdbcType=INTEGER}, 
+      #{iIsFinger,jdbcType=INTEGER}, #{iUserInfo,jdbcType=VARCHAR}, #{iLockInfo,jdbcType=VARCHAR}, 
+      #{iKeyInfo,jdbcType=VARCHAR}, #{iFingerInfo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.dhy.yycompany.lock.bean.Instruction">
+    insert into instruction
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="iId != null">
+        i_id,
+      </if>
+      <if test="iUuid != null">
+        i_uuid,
+      </if>
+      <if test="iLockId != null">
+        i_lock_id,
+      </if>
+      <if test="iUserId != null">
+        i_user_id,
+      </if>
+      <if test="iIsDelete != null">
+        i_is_delete,
+      </if>
+      <if test="iIsModify != null">
+        i_is_modify,
+      </if>
+      <if test="iIsUser != null">
+        i_is_user,
+      </if>
+      <if test="iIsLock != null">
+        i_is_lock,
+      </if>
+      <if test="iIsKey != null">
+        i_is_key,
+      </if>
+      <if test="iIsFinger != null">
+        i_is_finger,
+      </if>
+      <if test="iUserInfo != null">
+        i_user_info,
+      </if>
+      <if test="iLockInfo != null">
+        i_lock_info,
+      </if>
+      <if test="iKeyInfo != null">
+        i_key_info,
+      </if>
+      <if test="iFingerInfo != null">
+        i_finger_info,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="iId != null">
+        #{iId,jdbcType=INTEGER},
+      </if>
+      <if test="iUuid != null">
+        #{iUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="iLockId != null">
+        #{iLockId,jdbcType=INTEGER},
+      </if>
+      <if test="iUserId != null">
+        #{iUserId,jdbcType=INTEGER},
+      </if>
+      <if test="iIsDelete != null">
+        #{iIsDelete,jdbcType=INTEGER},
+      </if>
+      <if test="iIsModify != null">
+        #{iIsModify,jdbcType=INTEGER},
+      </if>
+      <if test="iIsUser != null">
+        #{iIsUser,jdbcType=INTEGER},
+      </if>
+      <if test="iIsLock != null">
+        #{iIsLock,jdbcType=INTEGER},
+      </if>
+      <if test="iIsKey != null">
+        #{iIsKey,jdbcType=INTEGER},
+      </if>
+      <if test="iIsFinger != null">
+        #{iIsFinger,jdbcType=INTEGER},
+      </if>
+      <if test="iUserInfo != null">
+        #{iUserInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="iLockInfo != null">
+        #{iLockInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="iKeyInfo != null">
+        #{iKeyInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="iFingerInfo != null">
+        #{iFingerInfo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.dhy.yycompany.lock.bean.InstructionExample" resultType="java.lang.Long">
+    select count(*) from instruction
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update instruction
+    <set>
+      <if test="record.iId != null">
+        i_id = #{record.iId,jdbcType=INTEGER},
+      </if>
+      <if test="record.iUuid != null">
+        i_uuid = #{record.iUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.iLockId != null">
+        i_lock_id = #{record.iLockId,jdbcType=INTEGER},
+      </if>
+      <if test="record.iUserId != null">
+        i_user_id = #{record.iUserId,jdbcType=INTEGER},
+      </if>
+      <if test="record.iIsDelete != null">
+        i_is_delete = #{record.iIsDelete,jdbcType=INTEGER},
+      </if>
+      <if test="record.iIsModify != null">
+        i_is_modify = #{record.iIsModify,jdbcType=INTEGER},
+      </if>
+      <if test="record.iIsUser != null">
+        i_is_user = #{record.iIsUser,jdbcType=INTEGER},
+      </if>
+      <if test="record.iIsLock != null">
+        i_is_lock = #{record.iIsLock,jdbcType=INTEGER},
+      </if>
+      <if test="record.iIsKey != null">
+        i_is_key = #{record.iIsKey,jdbcType=INTEGER},
+      </if>
+      <if test="record.iIsFinger != null">
+        i_is_finger = #{record.iIsFinger,jdbcType=INTEGER},
+      </if>
+      <if test="record.iUserInfo != null">
+        i_user_info = #{record.iUserInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.iLockInfo != null">
+        i_lock_info = #{record.iLockInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.iKeyInfo != null">
+        i_key_info = #{record.iKeyInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.iFingerInfo != null">
+        i_finger_info = #{record.iFingerInfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update instruction
+    set i_id = #{record.iId,jdbcType=INTEGER},
+      i_uuid = #{record.iUuid,jdbcType=VARCHAR},
+      i_lock_id = #{record.iLockId,jdbcType=INTEGER},
+      i_user_id = #{record.iUserId,jdbcType=INTEGER},
+      i_is_delete = #{record.iIsDelete,jdbcType=INTEGER},
+      i_is_modify = #{record.iIsModify,jdbcType=INTEGER},
+      i_is_user = #{record.iIsUser,jdbcType=INTEGER},
+      i_is_lock = #{record.iIsLock,jdbcType=INTEGER},
+      i_is_key = #{record.iIsKey,jdbcType=INTEGER},
+      i_is_finger = #{record.iIsFinger,jdbcType=INTEGER},
+      i_user_info = #{record.iUserInfo,jdbcType=VARCHAR},
+      i_lock_info = #{record.iLockInfo,jdbcType=VARCHAR},
+      i_key_info = #{record.iKeyInfo,jdbcType=VARCHAR},
+      i_finger_info = #{record.iFingerInfo,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.dhy.yycompany.lock.bean.Instruction">
+    update instruction
+    <set>
+      <if test="iUuid != null">
+        i_uuid = #{iUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="iLockId != null">
+        i_lock_id = #{iLockId,jdbcType=INTEGER},
+      </if>
+      <if test="iUserId != null">
+        i_user_id = #{iUserId,jdbcType=INTEGER},
+      </if>
+      <if test="iIsDelete != null">
+        i_is_delete = #{iIsDelete,jdbcType=INTEGER},
+      </if>
+      <if test="iIsModify != null">
+        i_is_modify = #{iIsModify,jdbcType=INTEGER},
+      </if>
+      <if test="iIsUser != null">
+        i_is_user = #{iIsUser,jdbcType=INTEGER},
+      </if>
+      <if test="iIsLock != null">
+        i_is_lock = #{iIsLock,jdbcType=INTEGER},
+      </if>
+      <if test="iIsKey != null">
+        i_is_key = #{iIsKey,jdbcType=INTEGER},
+      </if>
+      <if test="iIsFinger != null">
+        i_is_finger = #{iIsFinger,jdbcType=INTEGER},
+      </if>
+      <if test="iUserInfo != null">
+        i_user_info = #{iUserInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="iLockInfo != null">
+        i_lock_info = #{iLockInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="iKeyInfo != null">
+        i_key_info = #{iKeyInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="iFingerInfo != null">
+        i_finger_info = #{iFingerInfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where i_id = #{iId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.dhy.yycompany.lock.bean.Instruction">
+    update instruction
+    set i_uuid = #{iUuid,jdbcType=VARCHAR},
+      i_lock_id = #{iLockId,jdbcType=INTEGER},
+      i_user_id = #{iUserId,jdbcType=INTEGER},
+      i_is_delete = #{iIsDelete,jdbcType=INTEGER},
+      i_is_modify = #{iIsModify,jdbcType=INTEGER},
+      i_is_user = #{iIsUser,jdbcType=INTEGER},
+      i_is_lock = #{iIsLock,jdbcType=INTEGER},
+      i_is_key = #{iIsKey,jdbcType=INTEGER},
+      i_is_finger = #{iIsFinger,jdbcType=INTEGER},
+      i_user_info = #{iUserInfo,jdbcType=VARCHAR},
+      i_lock_info = #{iLockInfo,jdbcType=VARCHAR},
+      i_key_info = #{iKeyInfo,jdbcType=VARCHAR},
+      i_finger_info = #{iFingerInfo,jdbcType=VARCHAR}
+    where i_id = #{iId,jdbcType=INTEGER}
+  </update>
+</mapper>
