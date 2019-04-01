@@ -6,11 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd6eb95b-292e-406c-aaee-076494d8588c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.class" afterDir="false" />
-    </list>
+    <list default="true" id="fd6eb95b-292e-406c-aaee-076494d8588c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -444,7 +440,7 @@
       <workItem from="1553946639040" duration="9218000" />
       <workItem from="1553997776466" duration="537000" />
       <workItem from="1554003575533" duration="11604000" />
-      <workItem from="1554077587190" duration="7851000" />
+      <workItem from="1554077587190" duration="8252000" />
     </task>
     <task id="LOCAL-00001" summary="实现了主界面的公寓和房间信息展示">
       <created>1553439051396</created>
@@ -544,7 +540,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554086192446</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="添加房间代码有问题，修复完成">
+      <created>1554086643814</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1554086643814</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -580,7 +583,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101276000" />
+    <option name="totallyTimeSpent" value="101677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="146" width="1440" height="830" extended-state="6" />
@@ -592,10 +595,10 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.49782136" visible="true" weight="0.21530758" />
+      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49782136" visible="true" weight="0.21530758" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.07298475" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23170732" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4498645" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.16230936" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -734,7 +737,8 @@
     <MESSAGE value="实现了用户退宿功能&#10;实现了修改管理员信息功能" />
     <MESSAGE value="11" />
     <MESSAGE value="修改 添加房间代码&#10;添加 修改房间租金&#10;添加 获取单个管理员信息&#10;添加 获取所有管理员信息&#10;添加 删除管理员" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改 添加房间代码&#10;添加 修改房间租金&#10;添加 获取单个管理员信息&#10;添加 获取所有管理员信息&#10;添加 删除管理员" />
+    <MESSAGE value="添加房间代码有问题，修复完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加房间代码有问题，修复完成" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
