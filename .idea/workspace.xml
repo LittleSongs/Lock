@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd6eb95b-292e-406c-aaee-076494d8588c" name="Default Changelist" comment="" />
+    <list default="true" id="fd6eb95b-292e-406c-aaee-076494d8588c" name="Default Changelist" comment="de">
+      <change beforePath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,14 +22,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
+            <state relative-caret-position="301">
+              <caret line="157" column="8" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="1113" column="9" selection-start-line="1113" selection-start-column="9" selection-end-line="1113" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -41,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="267" column="38" selection-start-line="267" selection-start-column="38" selection-end-line="267" selection-end-column="38" />
+            <state relative-caret-position="21">
+              <caret line="270" column="23" selection-start-line="270" selection-start-column="23" selection-end-line="270" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,8 +160,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoService.java" />
-        <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java" />
       </list>
     </option>
   </component>
@@ -183,7 +194,71 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lock" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lock" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lock" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -202,9 +277,6 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.dhy.yycompany.lock.service.UserService" />
       <recent name="com.dhy.yycompany.lock.service.ApartmentService" />
@@ -212,13 +284,16 @@
       <recent name="com.dhy.yycompany.lock.service.roomInfoService" />
       <recent name="com.dhy.yycompany.lock.service.indexService" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.dhy.yycompany.lock.test" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="F:\ruanjian\keyidea\Lock" />
       <recent name="F:\ruanjian\keyidea\Lock\src\main\Resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.dhy.yycompany.lock.test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -234,93 +309,12 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.ImplTest.addRoom">
-    <configuration name="ImplTest.addRoom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lock" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
-      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
-      <option name="METHOD_NAME" value="addRoom" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImplTest.deleteAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lock" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
-      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
-      <option name="METHOD_NAME" value="deleteAdmin" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImplTest.getAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lock" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
-      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
-      <option name="METHOD_NAME" value="getAdmin" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImplTest.getAdmins" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lock" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
-      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
-      <option name="METHOD_NAME" value="getAdmins" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImplTest.modifyPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lock" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
-      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
-      <option name="METHOD_NAME" value="modifyPrice" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="JUnit.ImplTest.getAdmin" />
       <item itemvalue="JUnit.ImplTest.getAdmins" />
       <item itemvalue="JUnit.ImplTest.deleteAdmin" />
       <item itemvalue="JUnit.ImplTest.modifyPrice" />
       <item itemvalue="JUnit.ImplTest.addRoom" />
-      <item itemvalue="Tomcat Server.Tomcat 7.0.91" />
     </list>
     <recent_temporary>
       <list>
@@ -510,10 +504,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101677000" />
+    <option name="totallyTimeSpent" value="101684000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="146" width="1440" height="830" extended-state="6" />
+    <frame x="1921" y="147" width="1440" height="830" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.50217867" side_tool="true" weight="0.22736955" />
       <window_info id="Designer" order="1" />
@@ -1009,8 +1004,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
+        <state relative-caret-position="301">
+          <caret line="157" column="8" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1026,8 +1021,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="267" column="38" selection-start-line="267" selection-start-column="38" selection-end-line="267" selection-end-column="38" />
+        <state relative-caret-position="21">
+          <caret line="270" column="23" selection-start-line="270" selection-start-column="23" selection-end-line="270" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
