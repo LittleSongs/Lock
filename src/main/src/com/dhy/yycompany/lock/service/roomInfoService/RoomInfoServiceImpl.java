@@ -254,10 +254,13 @@ public class RoomInfoServiceImpl implements RoomInfoService {
         Map<String, String> map = new HashMap<>();
         if (roomList != null && roomList.size() != 0) {
             //该房间号存在
+            // System.out.println("房间号存在");
             map.put("result", "1");
             map.put("message", "房间已经存在");
+
         } else {
             //房间号不存在
+            System.out.println("房间号不存在");
             Room room = new Room();
             String uuid = UUID.randomUUID()
                     .toString().replaceAll("-", "");
@@ -270,8 +273,15 @@ public class RoomInfoServiceImpl implements RoomInfoService {
             room.setrLockId(0);
             room.setrDelete(0);
             room.setrModify(0);
-            map.put("result", "0");
-            map.put("message", "添加房间成功");
+            int num=roomMapper.insertSelective(room);
+            if(num==1){
+                map.put("result", "0");
+                map.put("message", "添加房间成功");
+            }else{
+                map.put("result", "1");
+                map.put("message", "房间创建失败");
+            }
+
         }
         return map;
     }

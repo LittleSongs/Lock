@@ -7,86 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd6eb95b-292e-406c-aaee-076494d8588c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/cc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/icon01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/ld_login.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/ld_logo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/information.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/key.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/open.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/bean/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/bean/Administrator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/bean/KeyAndAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/bean/KeyAndAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/AdminService/AdministratorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/AdminService/AdministratorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/AdminService/AdministratorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/AdminService/AdministratorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/font.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/iconfont.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/information.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/information.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/key.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/key.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/leftNavigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/leftNavigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/rightWindow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/rightWindow.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/tc.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/tc.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/tou.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/tou.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/xin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/xin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/iconfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/fingerprint.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/fingerprint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/information.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/information.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/key.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/key.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/num-alignment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/num-alignment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/openjia.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/openjia.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/tc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/tc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/key.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/key.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/open.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/open.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/bean/Administrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/bean/Administrator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/bean/KeyAndAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/bean/KeyAndAdmin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/service/AdminService/AdministratorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/service/AdminService/AdministratorService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/service/AdminService/AdministratorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/service/AdminService/AdministratorServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/test/ImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/test/ImplTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/bean/Administrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/bean/Administrator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/bean/AdministratorExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/bean/AdministratorExample$Criteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/bean/AdministratorExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/bean/AdministratorExample$Criterion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/bean/AdministratorExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/bean/AdministratorExample$GeneratedCriteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/bean/KeyAndAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/bean/KeyAndAdmin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/service/AdminService/AdministratorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/service/AdminService/AdministratorService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/service/AdminService/AdministratorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/service/AdminService/AdministratorServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/test/ImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/sell/WEB-INF/classes/com/dhy/yycompany/lock/test/ImplTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/WEB-INF/classes/mapper/AdministratorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/sell/WEB-INF/classes/mapper/AdministratorMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/css/font.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/css/iconfont.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/css/information.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/css/key.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/css/leftNavigation.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/css/rightWindow.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/css/tc.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/css/tou.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/css/xin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/font/iconfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/font/iconfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/font/iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/font/iconfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/img/tx1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/img/zw.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/js/fingerprint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/js/iconfont.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/js/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/js/information.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/js/key.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/js/num-alignment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/js/openjia.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sell/js/tc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -104,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+            <state relative-caret-position="346">
+              <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
+            <state relative-caret-position="219">
+              <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -125,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="294" column="19" lean-forward="true" selection-start-line="294" selection-start-column="19" selection-end-line="294" selection-end-column="19" />
+            <state relative-caret-position="121">
+              <caret line="267" column="38" selection-start-line="267" selection-start-column="38" selection-end-line="267" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -163,6 +86,7 @@
       <find>insert</find>
       <find>listmap</find>
       <find>uUid</find>
+      <find>添加</find>
     </findStrings>
     <replaceStrings>
       <replace>.yycompany.lock.</replace>
@@ -229,8 +153,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoService.java" />
-        <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -248,7 +172,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1920" />
     <option name="y" value="146" />
     <option name="width" value="1440" />
@@ -263,170 +187,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lock" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lock" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lock" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lock" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lock" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminService" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lock" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="ApartmentService" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lock" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="indexService" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lock" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="roomInfoService" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lock" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="testService" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lock" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lock" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -476,7 +237,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ImplTest.modifyPrice">
+  <component name="RunManager" selected="JUnit.ImplTest.addRoom">
+    <configuration name="ImplTest.addRoom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lock" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
+      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
+      <option name="METHOD_NAME" value="addRoom" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ImplTest.deleteAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lock" />
       <extension name="coverage">
@@ -520,22 +297,6 @@
       <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
       <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
       <option name="METHOD_NAME" value="getAdmins" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImplTest.modifyAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lock" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dhy.yycompany.lock.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dhy.yycompany.lock.test" />
-      <option name="MAIN_CLASS_NAME" value="com.dhy.yycompany.lock.test.ImplTest" />
-      <option name="METHOD_NAME" value="modifyAdmin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -631,20 +392,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ImplTest.modifyAdmin" />
       <item itemvalue="JUnit.ImplTest.getAdmin" />
       <item itemvalue="JUnit.ImplTest.getAdmins" />
       <item itemvalue="JUnit.ImplTest.deleteAdmin" />
       <item itemvalue="Tomcat Server.Tomcat 7.0.91" />
       <item itemvalue="JUnit.ImplTest.modifyPrice" />
+      <item itemvalue="JUnit.ImplTest.addRoom" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ImplTest.addRoom" />
         <item itemvalue="JUnit.ImplTest.modifyPrice" />
         <item itemvalue="JUnit.ImplTest.deleteAdmin" />
         <item itemvalue="JUnit.ImplTest.getAdmins" />
         <item itemvalue="JUnit.ImplTest.getAdmin" />
-        <item itemvalue="JUnit.ImplTest.modifyAdmin" />
       </list>
     </recent_temporary>
   </component>
@@ -683,7 +444,7 @@
       <workItem from="1553946639040" duration="9218000" />
       <workItem from="1553997776466" duration="537000" />
       <workItem from="1554003575533" duration="11604000" />
-      <workItem from="1554077587190" duration="7267000" />
+      <workItem from="1554077587190" duration="7851000" />
     </task>
     <task id="LOCAL-00001" summary="实现了主界面的公寓和房间信息展示">
       <created>1553439051396</created>
@@ -776,19 +537,17 @@
       <option name="project" value="LOCAL" />
       <updated>1554078284792</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="修改 添加房间代码&#10;添加 修改房间租金&#10;添加 获取单个管理员信息&#10;添加 获取所有管理员信息&#10;添加 删除管理员">
+      <created>1554086192446</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1554086192446</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ImplTest_getAdmin - 2019.04.01 at 08h 41m 24s.xml">
-      <configuration name="ImplTest.getAdmin" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ImplTest_getAdmin - 2019.04.01 at 08h 51m 04s.xml">
-      <configuration name="ImplTest.getAdmin" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ImplTest_getAdmins - 2019.04.01 at 08h 51m 26s.xml">
-      <configuration name="ImplTest.getAdmins" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ImplTest_getAdmin - 2019.04.01 at 09h 04m 18s.xml">
       <configuration name="ImplTest.getAdmin" configurationId="JUnit" />
     </history-entry>
@@ -810,13 +569,21 @@
     <history-entry file="ImplTest_modifyPrice - 2019.04.01 at 09h 55m 20s.xml">
       <configuration name="ImplTest.modifyPrice" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ImplTest_addRoom - 2019.04.01 at 10h 37m 18s.xml">
+      <configuration name="ImplTest.addRoom" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ImplTest_addRoom - 2019.04.01 at 10h 38m 30s.xml">
+      <configuration name="ImplTest.addRoom" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ImplTest_addRoom - 2019.04.01 at 10h 41m 17s.xml">
+      <configuration name="ImplTest.addRoom" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100692000" />
+    <option name="totallyTimeSpent" value="101276000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="146" width="1440" height="877" extended-state="1" />
-    <editor active="true" />
+    <frame x="1920" y="146" width="1440" height="830" extended-state="6" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.50217867" side_tool="true" weight="0.22736955" />
       <window_info id="Designer" order="1" />
@@ -828,7 +595,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.49782136" visible="true" weight="0.21530758" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.07298475" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23184714" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23170732" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.16230936" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -966,7 +733,8 @@
     <MESSAGE value="de" />
     <MESSAGE value="实现了用户退宿功能&#10;实现了修改管理员信息功能" />
     <MESSAGE value="11" />
-    <option name="LAST_COMMIT_MESSAGE" value="11" />
+    <MESSAGE value="修改 添加房间代码&#10;添加 修改房间租金&#10;添加 获取单个管理员信息&#10;添加 获取所有管理员信息&#10;添加 删除管理员" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改 添加房间代码&#10;添加 修改房间租金&#10;添加 获取单个管理员信息&#10;添加 获取所有管理员信息&#10;添加 删除管理员" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1301,13 +1069,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7">
@@ -1317,18 +1078,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/test/ImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+        <state relative-caret-position="346">
+          <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/src/com/dhy/yycompany/lock/service/roomInfoService/RoomInfoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="294" column="19" lean-forward="true" selection-start-line="294" selection-start-column="19" selection-end-line="294" selection-end-column="19" />
+        <state relative-caret-position="121">
+          <caret line="267" column="38" selection-start-line="267" selection-start-column="38" selection-end-line="267" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
