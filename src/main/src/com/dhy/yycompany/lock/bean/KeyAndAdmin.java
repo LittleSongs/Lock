@@ -30,4 +30,13 @@ public class KeyAndAdmin {
     public void setAdminId(Integer adminId) {
         this.adminId = adminId;
     }
+
+    @Override
+    public String toString() {
+        return "KeyAndAdmin{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", adminId=" + adminId +
+                '}';
+    }
 }

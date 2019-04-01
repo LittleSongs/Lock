@@ -10,18 +10,46 @@ html{
     background-color: #f0f8ff;
 }
 .house_status{
+
     min-height:400px;
-    height:700px;
+}
+.house_status::before,.house_status::after{
+    content: " ";
+    display: table;
+
+}
+.house_status::after{
+    clear: both;
+}
+
+.house_status1{
+
+    min-height:400px;
+}
+.house_status1::before,.house_status1::after{
+    content: " ";
+    display: table;
+
+}
+.house_status1::after{
+    clear: both;
+}
+.dw{
+    position: fixed;
 }
 .left_navigation{
     font-size: 20px;
     font-family: "微软雅黑";
     background-color: aliceblue;
+
     float:left;
     width: 16%;
-    min-height:100%;
+    /*height:100%;*/
     overflow-y:scroll;
     overflow-x:hidden;
+    left:0;
+    top:60px;
+    bottom:64px;
 }
 
 .left_navigation i{
@@ -101,4 +129,8 @@ html{
 }
 .finger{
     cursor:pointer;
+}
+
+.zxt{
+    height: 20px;
 }

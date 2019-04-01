@@ -4,12 +4,11 @@
     background-color: #eaeaea;
     z-index: 11;
     width: 50%;
-    height: 400px;
-    position:absolute;
-    top:0;
+    position:fixed;
+    top:15%;
     right:0;
     left:0;
-    bottom:0;
+    height: 475px;
     margin:auto;
 }
 
@@ -24,6 +23,53 @@
     text-decoration: none;
     color: #2D2C3B;
 }
+
+
+
+/*新建管理员背景层*/
+#popLayer2 {
+    position:fixed;
+    display: none;
+    background-color: #B3B3B3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    height: 100%;
+    filter: alpha(opacity=80);/* 只支持IE6、7、8、9 */
+}
+/*新建管理员弹出层*/
+#xjglypopBox {
+    display: none;
+    background-color: #eaeaea;
+    z-index: 11;
+    width: 400px;
+    position:fixed;
+    top:15%;
+    right:0;
+    left:0;
+    height: 300px;
+    margin:auto;
+}
+
+#xjglypopBox .close{
+    text-align: right;
+    margin-right: 5px;
+    background-color: #eaeaea;
+}
+
+/*关闭按钮*/
+#xjglypopBox .close a {
+    text-decoration: none;
+    color: #2D2C3B;
+}
+
+
+
+
 .ys{
 background-color:#a4d9ee;
 }

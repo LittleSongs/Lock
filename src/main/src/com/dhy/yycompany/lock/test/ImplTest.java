@@ -62,6 +62,14 @@ public class ImplTest {
         roomInfoService.getLockInfoFenye(2,3);
     }
 
+    //添加房间
+    @Test
+    public void addRoom(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        RoomInfoService roomInfoService = (RoomInfoService) context.getBean("roomInfoServiceImpl");
+        roomInfoService.addRoom(1,"409");
+    }
+
     //管理员添加开门密码
     @Test
     public void addKey(){
@@ -96,6 +104,14 @@ public class ImplTest {
         ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
         RoomInfoService roomInfoService = (RoomInfoService) context.getBean("roomInfoServiceImpl");
         roomInfoService.deleteRoom(71);
+    }
+
+    //修改房间租金
+    @Test
+    public void modifyPrice(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        RoomInfoService roomInfoService = (RoomInfoService) context.getBean("roomInfoServiceImpl");
+        roomInfoService.modifyPrice(51,111);
     }
 
     //修改公寓楼名
@@ -136,10 +152,27 @@ public class ImplTest {
         administratorService.modifyAdminInfo(1,"qqq","aaa");
     }
 
+    //获取单个管理员信息
+    @Test
+    public void getAdmin(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        AdministratorService administratorService = (AdministratorService) context.getBean("administratorServiceImpl");
+        administratorService.getInfo(1);
+    }
 
+    //获取所有管理员信息
+    @Test
+    public void getAdmins(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        AdministratorService administratorService = (AdministratorService) context.getBean("administratorServiceImpl");
+        administratorService.getInfos(1,5);
+    }
 
-
-
-
-
+    //删除管理员
+    @Test
+    public void deleteAdmin(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        AdministratorService administratorService = (AdministratorService) context.getBean("administratorServiceImpl");
+        administratorService.deleteAdmin(2);
+    }
 }

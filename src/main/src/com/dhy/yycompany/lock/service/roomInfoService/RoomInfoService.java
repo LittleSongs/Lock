@@ -57,9 +57,10 @@ public interface RoomInfoService {
      * 增加单个房间
      * 提供房间号创建房间
      */
-    Map<String,String> addRoom(String apartmentID,String roomNum);
+    Map<String,String> addRoom(int apartmentID,String roomNum);
 
     /**
-     *
+     *修改房间租金
      */
+    Map<String,String> modifyPrice(int roomID,int price);
 }

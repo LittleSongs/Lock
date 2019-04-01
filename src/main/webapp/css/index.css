@@ -55,6 +55,17 @@
     margin-right: 10px;
     margin-top: 30px;
 }
+.xq22{
+    cursor:pointer;
+    background-color: #7e7e7e;
+    border-radius:5px 5px;
+    text-align:center;
+    float: right;
+    width: 50px;
+    margin-right: 10px;
+    margin-top: 30px;
+    color: #f0f8ff;
+}
 .xq1{
     cursor:pointer;
     background-color: #7e7e7e;
@@ -211,4 +222,24 @@
 .zjfjkgb{
     margin-top: 4px;
     margin-right: 1px;
+}
+.nrgd{
+    height: 100px;
+    overflow:hidden;
+}
+
+.myxx::before,.myxx::after{
+    content: " ";
+    display: table;
+
+}
+.myxx::after{
+    clear: both;
+}
+.myxx2{
+    width: 20%;
+    font-size: 18px;
+    text-align:center;
+    margin:0 auto;
+    margin-left: 42.5%;
 }

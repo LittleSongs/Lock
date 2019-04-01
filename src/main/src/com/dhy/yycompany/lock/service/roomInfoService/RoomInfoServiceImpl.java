@@ -243,11 +243,11 @@ public class RoomInfoServiceImpl implements RoomInfoService {
     }
 
     @Override
-    public Map<String, String> addRoom(String apartmentID, String roomNum) {
+    public Map<String, String> addRoom(int apartmentID, String roomNum) {
         RoomExample roomExample = new RoomExample();
         RoomExample.Criteria criteria = roomExample.createCriteria();
         criteria.andRNumEqualTo(roomNum)
-                .andRApartmentIdEqualTo(Integer.valueOf(apartmentID));
+                .andRApartmentIdEqualTo(apartmentID);
         SqlSession sqlSession = sqlSessionFactory.openSession();
         RoomMapper roomMapper = sqlSession.getMapper(RoomMapper.class);
         List<Room> roomList = roomMapper.selectByExample(roomExample);
@@ -262,7 +262,7 @@ public class RoomInfoServiceImpl implements RoomInfoService {
             String uuid = UUID.randomUUID()
                     .toString().replaceAll("-", "");
             room.setrUuid(uuid);
-            room.setrApartmentId(Integer.valueOf(apartmentID));
+            room.setrApartmentId(apartmentID);
             room.setrFloor(roomNum.charAt(0) - '0');
             room.setrNum(roomNum);
             room.setrPrice(0);
@@ -275,4 +275,24 @@ public class RoomInfoServiceImpl implements RoomInfoService {
         }
         return map;
     }
+
+    @Override
+    public Map<String, String> modifyPrice(int roomID,int price) {
+        SqlSession sqlSession=sqlSessionFactory.openSession();
+        RoomMapper roomMapper=sqlSession.getMapper(RoomMapper.class);
+        Room room=new Room();
+        room.setrId(roomID);
+        room.setrPrice(price);
+        int num=roomMapper.updateByPrimaryKeySelective(room);
+        Map<String, String> map = new HashMap<>();
+        if(num==1){
+            map.put("result", "0");
+            map.put("message", "修改租金成功");
+        }else{
+            map.put("result", "1");
+            map.put("message", "修改租金失败");
+        }
+        return map;
+    }
+
 }

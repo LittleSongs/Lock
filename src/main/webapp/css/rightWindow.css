@@ -1,6 +1,40 @@
 .right_window{
+    overflow-y:scroll;
+    overflow-x:hidden;
     background-color: #f0f8ff;
     font-size: 30px;
+    float: right;
+    width: 84%;
+    top: 63px;
+    bottom: 64px;
+    left: 16%;
+}
+
+.right_window a:hover{
+    background-color: #a0bdff;
+}
+.right_window::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+.right_window::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: #535353;
+}
+.right_window::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background: #EDEDED;
+}
+
+.db{
+    width: 100%;
+}
+.db1{
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
 }
 .card{
     font-size: 20px;
@@ -30,6 +64,7 @@
     font-family: "微软雅黑";
 }
 .right_floor{
+    width: 100%;
     float: left;
 }
 .right_floors::before,.right_floors::after{
@@ -49,7 +84,7 @@
 .right_rooms{
     float: left;
     margin-left: 60px;
-    max-width: 75%;
+    width: 75%;
 }
 .right_room{
 

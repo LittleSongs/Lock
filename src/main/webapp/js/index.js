@@ -17,6 +17,12 @@ function closeBox() {
     popLayer.style.display = "none";
 }
 
+
+
+
+
+
+
 /*点击弹出按钮*/
 function popBox2() {
     console.log("弹出")

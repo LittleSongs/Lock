@@ -11,6 +11,8 @@
     <result column="admin_address" jdbcType="VARCHAR" property="adminAddress" />
     <result column="admin_account" jdbcType="VARCHAR" property="adminAccount" />
     <result column="admin_password" jdbcType="VARCHAR" property="adminPassword" />
+    <result column="admin_modify" jdbcType="INTEGER" property="adminModify" />
+    <result column="admin_delete" jdbcType="INTEGER" property="adminDelete" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -72,7 +74,7 @@
   </sql>
   <sql id="Base_Column_List">
     admin_id, admin_uuid, admin_name, admin_avator, admin_permission, admin_phone, admin_address, 
-    admin_account, admin_password
+    admin_account, admin_password, admin_modify, admin_delete
   </sql>
   <select id="selectByExample" parameterType="com.dhy.yycompany.lock.bean.AdministratorExample" resultMap="BaseResultMap">
     select
@@ -107,12 +109,12 @@
   <insert id="insert" parameterType="com.dhy.yycompany.lock.bean.Administrator">
     insert into administrator (admin_id, admin_uuid, admin_name, 
       admin_avator, admin_permission, admin_phone, 
-      admin_address, admin_account, admin_password
-      )
+      admin_address, admin_account, admin_password, 
+      admin_modify, admin_delete)
     values (#{adminId,jdbcType=INTEGER}, #{adminUuid,jdbcType=VARCHAR}, #{adminName,jdbcType=VARCHAR}, 
       #{adminAvator,jdbcType=VARCHAR}, #{adminPermission,jdbcType=INTEGER}, #{adminPhone,jdbcType=VARCHAR}, 
-      #{adminAddress,jdbcType=VARCHAR}, #{adminAccount,jdbcType=VARCHAR}, #{adminPassword,jdbcType=VARCHAR}
-      )
+      #{adminAddress,jdbcType=VARCHAR}, #{adminAccount,jdbcType=VARCHAR}, #{adminPassword,jdbcType=VARCHAR}, 
+      #{adminModify,jdbcType=INTEGER}, #{adminDelete,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.dhy.yycompany.lock.bean.Administrator">
     insert into administrator
@@ -144,6 +146,12 @@
       <if test="adminPassword != null">
         admin_password,
       </if>
+      <if test="adminModify != null">
+        admin_modify,
+      </if>
+      <if test="adminDelete != null">
+        admin_delete,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="adminId != null">
@@ -172,6 +180,12 @@
       </if>
       <if test="adminPassword != null">
         #{adminPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="adminModify != null">
+        #{adminModify,jdbcType=INTEGER},
+      </if>
+      <if test="adminDelete != null">
+        #{adminDelete,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -211,6 +225,12 @@
       <if test="record.adminPassword != null">
         admin_password = #{record.adminPassword,jdbcType=VARCHAR},
       </if>
+      <if test="record.adminModify != null">
+        admin_modify = #{record.adminModify,jdbcType=INTEGER},
+      </if>
+      <if test="record.adminDelete != null">
+        admin_delete = #{record.adminDelete,jdbcType=INTEGER},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -226,7 +246,9 @@
       admin_phone = #{record.adminPhone,jdbcType=VARCHAR},
       admin_address = #{record.adminAddress,jdbcType=VARCHAR},
       admin_account = #{record.adminAccount,jdbcType=VARCHAR},
-      admin_password = #{record.adminPassword,jdbcType=VARCHAR}
+      admin_password = #{record.adminPassword,jdbcType=VARCHAR},
+      admin_modify = #{record.adminModify,jdbcType=INTEGER},
+      admin_delete = #{record.adminDelete,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -258,6 +280,12 @@
       <if test="adminPassword != null">
         admin_password = #{adminPassword,jdbcType=VARCHAR},
       </if>
+      <if test="adminModify != null">
+        admin_modify = #{adminModify,jdbcType=INTEGER},
+      </if>
+      <if test="adminDelete != null">
+        admin_delete = #{adminDelete,jdbcType=INTEGER},
+      </if>
     </set>
     where admin_id = #{adminId,jdbcType=INTEGER}
   </update>
@@ -270,7 +298,9 @@
       admin_phone = #{adminPhone,jdbcType=VARCHAR},
       admin_address = #{adminAddress,jdbcType=VARCHAR},
       admin_account = #{adminAccount,jdbcType=VARCHAR},
-      admin_password = #{adminPassword,jdbcType=VARCHAR}
+      admin_password = #{adminPassword,jdbcType=VARCHAR},
+      admin_modify = #{adminModify,jdbcType=INTEGER},
+      admin_delete = #{adminDelete,jdbcType=INTEGER}
     where admin_id = #{adminId,jdbcType=INTEGER}
   </update>
 </mapper>

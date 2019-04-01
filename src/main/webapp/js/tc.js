@@ -3,7 +3,6 @@ function glypopBox() {
     var popBox = document.getElementById("glygl");
     var popLayer1 = document.getElementById("popLayer1");
     popLayer1.style.display = "block";
-    console.log(popLayer1)
     popBox.style.display = "block";
 
 
@@ -21,8 +20,8 @@ function glycloseBox() {
 /*点击弹出增删房间*/
 function zsfjpopBox() {
     var zsfjtc = document.getElementById("zsfjtc");
-    var popLayer1 = document.getElementById("popLayer1");
-    popLayer1.style.display = "block";
+    var popLayer2 = document.getElementById("popLayer2");
+    popLayer2.style.display = "block";
     zsfjtc.style.display = "block";
 
 
@@ -31,9 +30,9 @@ function zsfjpopBox() {
 /*点击关闭增删房间*/
 function zsfjcloseBox() {
     var zsfjtc = document.getElementById("zsfjtc");
-    var popLayer1 = document.getElementById("popLayer1");
+    var popLayer2 = document.getElementById("popLayer2");
     zsfjtc.style.display = "none";
-    popLayer1.style.display = "none";
+    popLayer2.style.display = "none";
 }
 
 /*点击弹出修改租金*/
@@ -62,7 +61,27 @@ function zjzy() {
 
 }
 
+/*点击弹出新建管理员按钮*/
+function xjglypopBox() {
+    console.log("弹出")
+    glycloseBox();
+    var xjglypopBox = document.getElementById("xjglypopBox");
+    var popLayer2 = document.getElementById("popLayer2");
+    xjglypopBox.style.display = "block";
+    popLayer2.style.display = "block";
 
+};
+
+/*点击关闭按钮*/
+function xjglycloseBox() {
+
+    var xjglypopBox = document.getElementById("xjglypopBox");
+    var popLayer2 = document.getElementById("popLayer2");
+    xjglypopBox.style.display = "none";
+    popLayer2.style.display = "none";
+    console.log("关闭新建管理员弹窗")
+    glypopBox();
+}
 
 $(function() {
 

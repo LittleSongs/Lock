@@ -9,6 +9,23 @@ public class Administrator {
 
     private String adminAvator;
 
+    @Override
+    public String toString() {
+        return "Administrator{" +
+                "adminId=" + adminId +
+                ", adminUuid='" + adminUuid + '\'' +
+                ", adminName='" + adminName + '\'' +
+                ", adminAvator='" + adminAvator + '\'' +
+                ", adminPermission=" + adminPermission +
+                ", adminPhone='" + adminPhone + '\'' +
+                ", adminAddress='" + adminAddress + '\'' +
+                ", adminAccount='" + adminAccount + '\'' +
+                ", adminPassword='" + adminPassword + '\'' +
+                ", adminModify=" + adminModify +
+                ", adminDelete=" + adminDelete +
+                '}';
+    }
+
     private Integer adminPermission;
 
     private String adminPhone;
