@@ -23,6 +23,6 @@ public interface UserService {
      * 6。room表的人数字段加1
      *
      */
-    void addHomeMaster(String account,int roomID,String name,char sex,String idCard,
+    Map<String,String> addHomeMaster(String account,int roomID,String name,String sex,String idCard,
                        String phone,String stayTime,String retreatTime,String introduction);
 }

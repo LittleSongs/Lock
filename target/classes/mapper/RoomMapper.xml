@@ -294,4 +294,11 @@
         set r_resident_num=r_resident_num-1
         where r_id=#{rId,jdbcType=INTEGER}
     </update>
+
+    <update id="insertUserByPrimaryKey" parameterType="com.dhy.yycompany.lock.bean.Room">
+        update room
+        set r_resident_num=r_resident_num+1
+        where r_id=#{rId,jdbcType=INTEGER}
+    </update>
+
 </mapper>

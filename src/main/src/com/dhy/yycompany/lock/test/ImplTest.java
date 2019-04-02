@@ -1,12 +1,15 @@
 package com.dhy.yycompany.lock.test;
 
+import com.dhy.yycompany.lock.bean.UserInfo;
 import com.dhy.yycompany.lock.service.AdminService.AdministratorService;
 import com.dhy.yycompany.lock.service.ApartmentService.ApartmentService;
+import com.dhy.yycompany.lock.service.FingerService.FingerPrintService;
 import com.dhy.yycompany.lock.service.UserService.UserService;
 import com.dhy.yycompany.lock.service.indexService.IndexService;
 import com.dhy.yycompany.lock.service.roomInfoService.RoomInfoService;
 import com.dhy.yycompany.lock.service.testService.TestService;
 
+import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -188,6 +191,17 @@ public class ImplTest {
     //添加户主功能
     @Test
     public void addHomeMaster(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserService userService=(UserService) context.getBean("userServiceImpl");
+        userService.addHomeMaster("e",93,"wanggangdan","m","123123",
+                "123123","2018-03-03","2022-03-03","henshuai");
+    }
 
+    //添加指纹功能
+    @Test
+    public void addFingerPrint(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        FingerPrintService fingerPrintService=(FingerPrintService) context.getBean("fingerPrintServiceImpl");
+        fingerPrintService.addFingerPrint();
     }
 }

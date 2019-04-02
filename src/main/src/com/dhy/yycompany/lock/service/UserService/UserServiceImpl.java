@@ -2,10 +2,7 @@ package com.dhy.yycompany.lock.service.UserService;
 
 import com.alibaba.fastjson.JSONObject;
 import com.dhy.yycompany.lock.bean.*;
-import com.dhy.yycompany.lock.dao.InstructionMapper;
-import com.dhy.yycompany.lock.dao.KeyInfoMapper;
-import com.dhy.yycompany.lock.dao.RoomMapper;
-import com.dhy.yycompany.lock.dao.UserInfoMapper;
+import com.dhy.yycompany.lock.dao.*;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +19,11 @@ import java.util.UUID;
 public class UserServiceImpl implements UserService {
     @Autowired
     private SqlSessionFactory sqlSessionFactory;
+
+
+
+
+
     /**
      * 用户退宿功能：住户表删除住户，对应的room表住户数减1，住户对应的开门密码表的信息需要删除，指令表增加删除密码指令，让树莓派更新密码表。
      * @param userID
@@ -109,16 +111,83 @@ public class UserServiceImpl implements UserService {
                     map.put("message", "删除用户成功");
                 }
             }
-
-
-
-
         }else{
             //删除用户失败
             map.put("result", "1");
             map.put("message", "删除用户失败");
         }
 
+        return map;
+    }
+
+
+    /**
+     * 增加房间户主
+     *
+     *
+     * 1。前端把用户手机号和用户个人信息发送到后台
+     * 2。在user表中创建数据
+     * 3。根据手机号在手机用户表中修改userID字段为新生成user_id的值
+     * 4。添加用户指纹
+     * 5。把指纹信息发送到树莓派端
+     * 6。room表的人数字段加1
+     *
+     */
+    @Override
+    public Map<String,String> addHomeMaster(String account, int roomID, String name, String sex, String idCard, String phone, String stayTime, String retreatTime, String introduction) {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        Map<String, String> map = new HashMap<String, String>();
+
+        UserInfo u=new UserInfo();
+        String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+        u.setuUuid(uuid);
+        u.setuRoomId(roomID);
+        u.setuName(name);
+        u.setuSex(sex);
+        u.setuIdCard(idCard);
+        u.setuPhone(phone);
+        u.setuStayTime(stayTime);
+        u.setuRetreatTime(retreatTime);
+        u.setuIntroduction(introduction);
+        u.setuPrimaryUser(1);
+        u.setuDelete(0);
+        u.setuIsModify(0);
+        //创建mapper
+        UserInfoMapper userInfoMapper=sqlSession.getMapper(UserInfoMapper.class);
+
+        int num=userInfoMapper.insertUserReturnUId(u);
+        System.out.println("创建用户成功，userID="+u.getuId());
+        if(num==1){
+            //住户表中创建信息成功,下一步，把手机用户表中对应的用户的userid更新
+            PhoneUserInfoExample phoneUserInfoExample=new PhoneUserInfoExample();
+            PhoneUserInfoExample.Criteria criteria=phoneUserInfoExample.createCriteria();
+            criteria.andPAccountNumEqualTo(account);
+            PhoneUserInfo phoneUserInfo=new PhoneUserInfo();
+            phoneUserInfo.setpUId(u.getuId());
+            PhoneUserInfoMapper phoneUserInfoMapper=sqlSession.getMapper(PhoneUserInfoMapper.class);
+            int num1=phoneUserInfoMapper.updateByExampleSelective(phoneUserInfo,phoneUserInfoExample);
+            if(num1==1){
+                //手机用户表更新userID字段成功
+                System.out.println("手机用户表更新userID字段成功");
+                //对应的room房间人数加1
+                RoomMapper roomMapper=sqlSession.getMapper(RoomMapper.class);
+                int num2=roomMapper.insertUserByPrimaryKey(roomID);
+                if(num2==1){
+                    System.out.println("房间人数加1成功");
+                }else{
+                    map.put("result","1");
+                    map.put("message","房间人数加1失败");
+                }
+
+            }else{
+                map.put("result","1");
+                map.put("message","在住户表中创建信息失败");
+            }
+        }else{
+            //住户表中创建信息失败
+            map.put("result","1");
+            map.put("message","在住户表中创建信息失败");
+        }
         return map;
     }
 

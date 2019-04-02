@@ -28,4 +28,5 @@ public interface RoomMapper {
 
     int updateByPrimaryKey(Room record);
     int deleteUserByPrimaryKey(@Param("rId") int rId);
+    int insertUserByPrimaryKey(@Param("rId") int rId);
 }
