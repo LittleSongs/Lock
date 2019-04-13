@@ -27,6 +27,8 @@ public class UserInfo {
 
     private Integer uIsModify;
 
+    private String sexStr;//性别转换
+
     public Integer getuId() {
         return uId;
     }
@@ -129,6 +131,14 @@ public class UserInfo {
 
     public void setuIsModify(Integer uIsModify) {
         this.uIsModify = uIsModify;
+    }
+
+    public String getSexStr() {
+        return sexStr;
+    }
+
+    public void setSexStr(String sexStr) {
+        this.sexStr = sexStr;
     }
 
     @Override

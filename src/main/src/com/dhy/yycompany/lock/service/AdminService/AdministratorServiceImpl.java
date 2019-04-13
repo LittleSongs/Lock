@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.dhy.yycompany.lock.bean.*;
 import com.dhy.yycompany.lock.dao.AdministratorMapper;
+import com.dhy.yycompany.lock.dao.InstructionMapper;
 import com.dhy.yycompany.lock.dao.KeyAndAdminMapper;
 import com.dhy.yycompany.lock.dao.KeyInfoMapper;
 import com.github.pagehelper.Page;
@@ -29,6 +30,7 @@ public class AdministratorServiceImpl implements AdministratorService {
 
     @Override
     public int addkey(Map<String ,String> map) {
+        Map<String ,Object> map1=new HashMap<>();
         KeyInfo keyInfo=new KeyInfo();
         keyInfo.setkUuid(UUID.randomUUID().toString().replaceAll("-", ""));
         keyInfo.setkLockId(Integer.valueOf(map.get("LockID")));
@@ -43,9 +45,48 @@ public class AdministratorServiceImpl implements AdministratorService {
         int num=keyInfoMapper.insert(keyInfo);
         if(num==1){
             System.out.println("添加密码成功");
-            return 0;
+            Map<String, String> params = new HashMap<String, String>();
+            //查到数据，返回user用户数据，以json的形式
+            //System.out.println("=====================");
+            //System.out.println(keyInfo.getkPassword());
+            //System.out.println("=====================");
+            params.put("result", "ok");
+            params.put("method","addTempraryKey");
+            params.put("kPassword",keyInfo.getkPassword());
+            //params.put("kId","");
+            params.put("kUuid",keyInfo.getkUuid());
+            params.put("kFailureTime",keyInfo.getkFailureTime());
+            params.put("kAvailableTimes",keyInfo.getkAvailableTimes().toString());
+            params.put("kDelete",keyInfo.getkDelete().toString());
+            params.put("kIsModify",keyInfo.getkIsModify().toString());
+            params.put("kLockId",keyInfo.getkLockId().toString());
+            params.put("kUserId",keyInfo.getkUserId().toString());
+
+            String jsonString = JSONObject.toJSONString(params);
+
+            Instruction instruction=new Instruction();
+            //下面是指令对象赋值，要修改
+            instruction.setiUuid(UUID.randomUUID().toString().replaceAll("-", ""));
+            instruction.setiLockId(keyInfo.getkLockId());
+            instruction.setiUserId(keyInfo.getkUserId());
+            instruction.setiIsDelete(0);
+            instruction.setiIsModify(1);
+            instruction.setiIsFinger(0);
+            instruction.setiIsKey(1);
+            instruction.setiIsLock(0);
+            instruction.setiIsUser(0);
+            instruction.setiFingerInfo("");
+            instruction.setiKeyInfo(jsonString);
+            instruction.setiLockInfo("");
+            instruction.setiUserInfo("");
+            InstructionMapper instructionMapper=sqlSession.getMapper(InstructionMapper.class);
+            num=instructionMapper.insert(instruction);
+            if(num==1){
+                return 0;
+            }else{
+                return 1;
+            }
         }else{
-            System.out.println("添加密码失败");
             return 1;
         }
     }

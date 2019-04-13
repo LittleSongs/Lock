@@ -73,4 +73,22 @@ public interface RoomInfoService {
      * @return
      */
     JSON getRoomsNum(int apartmentID,int floor);
+
+
+    //管理员直接开门
+    /**
+     * 1.在指令表中添加开门指令
+     * @param lockID
+     * @param userID
+     * @return
+     */
+    Map<String,Object> openDoor(int lockID,int userID);
+
+
+    //绑定房间和门锁
+    Map<String,Object> bindRoomLock(int roomID,String introduction);
+
+    //租房时间表操作
+    //操作renting表如果房间id存在，则更新时间。否则，创建信息
+    Map<String,Object> rentingRoom(int roomID,String rentTime,String retreatTime);
 }

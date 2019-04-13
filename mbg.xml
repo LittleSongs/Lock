@@ -104,9 +104,13 @@
         <!--<table tableName="key_info" domainObjectName="KeyInfo"></table>-->
         <!--<table tableName="lock_info" domainObjectName="LockInfo"></table>-->
 <!--        <table tableName="administrator" domainObjectName="Administrator"></table>-->
-        <table tableName="phone_user_info" domainObjectName="PhoneUserInfo"></table>
+<!--        <table tableName="phone_user_info" domainObjectName="PhoneUserInfo"></table>-->
 <!--        <table tableName="key_and_admin" domainObjectName="KeyAndAdmin"></table>-->
 <!--        <table tableName="instruction" domainObjectName="Instruction"></table>-->
+<!--        <table tableName="roomX" domainObjectName="RoomX"></table>-->
+<!--        <table tableName="fingerprint" domainObjectName="FingerPrint"></table>-->
+        <table tableName="renting" domainObjectName="Renting"></table>
+
 
 
 

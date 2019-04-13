@@ -21,6 +21,7 @@ public class RoomInfoServiceImpl implements RoomInfoService {
     @Autowired
     private SqlSessionFactory sqlSessionFactory;
 
+
     /**
      * 1.通过room_id找到任意一位住户，可以得到租住时间。
      * 2.在room表中获得居住人数
@@ -28,44 +29,91 @@ public class RoomInfoServiceImpl implements RoomInfoService {
      * 4.根据room_id找到所有住户
      */
     @Override
-    public Map<String, Object> getRoomInfo(int room_id) {
-        VRoomUserLockExample vRoomUserLockExample = new VRoomUserLockExample();
-        VRoomUserLockExample.Criteria criteria = vRoomUserLockExample.createCriteria();
-        criteria.andRIdEqualTo(room_id);
+    public Map<String, Object> getRoomInfo(int roomId) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        VRoomUserLockMapper vRoomUserLockMapper = sqlSession.getMapper(VRoomUserLockMapper.class);
-        List<VRoomUserLock> vRoomUserLockList = vRoomUserLockMapper.selectByExample(vRoomUserLockExample);
+        RoomXMapper roomXMapper = sqlSession.getMapper(RoomXMapper.class);
+        RoomXExample roomXExample = new RoomXExample();
+        RoomXExample.Criteria criteria = roomXExample.createCriteria();
+        criteria.andRIdEqualTo(roomId);
+        List<RoomX> roomXES = roomXMapper.selectByExample(roomXExample);
+        RoomX roomX =null;
+        if(roomXES.size()==1) {
+            roomX = roomXES.get(0);
+            int apartmentId = roomX.getrApartmentId();
+            ApartmentMapper apartmentMapper = sqlSession.getMapper(ApartmentMapper.class);
+            Apartment apartment = apartmentMapper.selectByPrimaryKey(apartmentId);
+            roomX.setrApartmentName(apartment.getaName());
+
+            int integer = roomX.getrLockId();
+            LockInfoMapper lockInfoMapper = sqlSession.getMapper(LockInfoMapper.class);
+            LockInfo lockInfo = lockInfoMapper.selectByPrimaryKey(integer);
+            roomX.setOnOff(lockInfo.getlStatus());
+        }
         Map<String, Object> map = new HashMap<>();
-        map.put("time", vRoomUserLockList.get(0).getStayTime() + "~" + vRoomUserLockList.get(0).getRetreatTime());//例子： 2019-01-01～2020-11-11
-        map.put("residentNum", vRoomUserLockList.get(0).getResidentNum());
-        map.put("status", vRoomUserLockList.get(0).getlStatus());
+        map.put("roomX",roomX);
 
-//        System.out.println("time"+vRoomUserLockList.get(0).getStayTime()+"~"+vRoomUserLockList.get(0).getRetreatTime());
-//        System.out.println("residentNum"+vRoomUserLockList.get(0).getResidentNum());
-//        System.out.println("status"+vRoomUserLockList.get(0).getlStatus());
-
-
-        UserInfoExample userInfoExample = new UserInfoExample();
-        UserInfoExample.Criteria criteria1 = userInfoExample.createCriteria();
-        criteria1.andURoomIdEqualTo(room_id);
-        UserInfoMapper userInfoMapper = sqlSession.getMapper(UserInfoMapper.class);
+        UserInfoExample userInfoExample=new UserInfoExample();
+        UserInfoExample.Criteria criteria1=userInfoExample.createCriteria();
+        criteria1.andURoomIdEqualTo(roomId);
+        UserInfoMapper userInfoMapper=sqlSession.getMapper(UserInfoMapper.class);
+        userInfoExample.setOrderByClause("u_delete asc,u_primary_user desc");
         List<UserInfo> userInfoList = userInfoMapper.selectByExample(userInfoExample);
+        AllChange.changeSex(userInfoList);
         System.out.println("-----------------------");
-        for (UserInfo u : userInfoList) {
+        for (UserInfo u: userInfoList){
             System.out.println(u);
         }
-        map.put("users", userInfoList);
-        RoomExample roomExample = new RoomExample();
-        RoomExample.Criteria criteria2 = roomExample.createCriteria();
-        criteria2.andRIdEqualTo(room_id);
-        RoomMapper roomMapper = sqlSession.getMapper(RoomMapper.class);
-        List<Room> roomList = roomMapper.selectByExample(roomExample);
-        map.put("price", roomList.get(0).getrPrice());
-        System.out.println("map==" + map);
-        sqlSession.commit();
+        map.put("users",userInfoList);
+        System.out.println("map=="+map);
         sqlSession.close();
         return map;
     }
+
+//    /**
+//     * 1.通过room_id找到任意一位住户，可以得到租住时间。
+//     * 2.在room表中获得居住人数
+//     * 3.通过room_id找到lock_id，然后获得门锁状态（开或关）
+//     * 4.根据room_id找到所有住户
+//     */
+//    @Override
+//    public Map<String, Object> getRoomInfo(int room_id) {
+//        VRoomUserLockExample vRoomUserLockExample = new VRoomUserLockExample();
+//        VRoomUserLockExample.Criteria criteria = vRoomUserLockExample.createCriteria();
+//        criteria.andRIdEqualTo(room_id);
+//        SqlSession sqlSession = sqlSessionFactory.openSession();
+//        VRoomUserLockMapper vRoomUserLockMapper = sqlSession.getMapper(VRoomUserLockMapper.class);
+//        List<VRoomUserLock> vRoomUserLockList = vRoomUserLockMapper.selectByExample(vRoomUserLockExample);
+//        Map<String, Object> map = new HashMap<>();
+//        map.put("time", vRoomUserLockList.get(0).getStayTime() + "~" + vRoomUserLockList.get(0).getRetreatTime());//例子： 2019-01-01～2020-11-11
+//        map.put("residentNum", vRoomUserLockList.get(0).getResidentNum());
+//        map.put("status", vRoomUserLockList.get(0).getlStatus());
+//
+////        System.out.println("time"+vRoomUserLockList.get(0).getStayTime()+"~"+vRoomUserLockList.get(0).getRetreatTime());
+////        System.out.println("residentNum"+vRoomUserLockList.get(0).getResidentNum());
+////        System.out.println("status"+vRoomUserLockList.get(0).getlStatus());
+//
+//
+//        UserInfoExample userInfoExample = new UserInfoExample();
+//        UserInfoExample.Criteria criteria1 = userInfoExample.createCriteria();
+//        criteria1.andURoomIdEqualTo(room_id);
+//        UserInfoMapper userInfoMapper = sqlSession.getMapper(UserInfoMapper.class);
+//        List<UserInfo> userInfoList = userInfoMapper.selectByExample(userInfoExample);
+//        System.out.println("-----------------------");
+//        for (UserInfo u : userInfoList) {
+//            System.out.println(u);
+//        }
+//        map.put("users", userInfoList);
+//        RoomExample roomExample = new RoomExample();
+//        RoomExample.Criteria criteria2 = roomExample.createCriteria();
+//        criteria2.andRIdEqualTo(room_id);
+//        RoomMapper roomMapper = sqlSession.getMapper(RoomMapper.class);
+//        List<Room> roomList = roomMapper.selectByExample(roomExample);
+//        map.put("price", roomList.get(0).getrPrice());
+//        System.out.println("map==" + map);
+//        sqlSession.commit();
+//        sqlSession.close();
+//        return map;
+//    }
 
 
     /**
@@ -329,4 +377,112 @@ public class RoomInfoServiceImpl implements RoomInfoService {
     }
 
 
+    //管理员直接开门
+    @Override
+    public Map<String, Object> openDoor(int lockID, int userID) {
+        SqlSession sqlSession=sqlSessionFactory.openSession();
+        Instruction instruction = new Instruction();
+        instruction.setiUuid(UUID.randomUUID().toString().replaceAll("-", ""));
+        instruction.setiLockId(lockID);
+        instruction.setiUserId(userID);
+        instruction.setiIsDelete(0);
+        instruction.setiIsModify(1);
+        instruction.setiIsUser(0);
+        instruction.setiIsLock(1);
+        instruction.setiIsKey(0);
+        instruction.setiIsFinger(0);
+        instruction.setiUserInfo("");
+        instruction.setiLockInfo("{\"result\":\"ok\",\"method\":\"openDoor\"}");
+        instruction.setiKeyInfo("");
+        instruction.setiFingerInfo("");
+        InstructionMapper instructionMapper=sqlSession.getMapper(InstructionMapper.class);
+        int result=instructionMapper.insert(instruction);
+        Map<String,Object> map=new HashMap<>();
+        if(result==1){
+            map.put("result",0);
+            map.put("detail","开门指令生成成功");
+        }else{
+            map.put("result",1);
+            map.put("detail","开门指令生成失败");
+        }
+
+        return map;
+    }
+
+    @Override
+    public Map<String, Object> bindRoomLock(int roomID, String introduction) {
+        SqlSession sqlSession=sqlSessionFactory.openSession();
+        LockInfoExample lockInfoExample=new LockInfoExample();
+        LockInfoExample.Criteria criteria=lockInfoExample.createCriteria();
+        criteria.andLIntroductionEqualTo(introduction);
+        LockInfoMapper lockInfoMapper=sqlSession.getMapper(LockInfoMapper.class);
+        List<LockInfo> lockInfos=lockInfoMapper.selectByExample(lockInfoExample);
+        Map<String,Object> map=new HashMap<>();
+        if(lockInfos!=null && lockInfos.size()!=0){
+            System.out.println(lockInfos.get(0).getlIntroduction());
+            int lock_id=lockInfos.get(0).getlId();
+            RoomExample roomExample=new RoomExample();
+            RoomExample.Criteria criteria1=roomExample.createCriteria();
+            criteria1.andRIdEqualTo(roomID);
+            Room room=new Room();
+            room.setrLockId(lock_id);
+            RoomMapper roomMapper=sqlSession.getMapper(RoomMapper.class);
+            int resultRoomMapper=roomMapper.updateByExampleSelective(room,roomExample);
+            if(resultRoomMapper==1){
+                map.put("result",0);
+                map.put("detail","房间绑定门锁成功");
+            }else{
+                map.put("result",1);
+                map.put("detail","房间绑定门锁失败");
+            }
+        }else{
+            map.put("result",1);
+            map.put("detail","房间绑定门锁失败");
+        }
+        return map;
+    }
+
+    @Override
+    public Map<String, Object> rentingRoom(int roomID, String rentTime, String retreatTime) {
+        SqlSession sqlSession=sqlSessionFactory.openSession();
+        RentingExample rentingExample = new RentingExample();
+        RentingExample.Criteria criteria=rentingExample.createCriteria();
+        criteria.andRoomIdEqualTo(roomID);
+        RentingMapper rentingMapper=sqlSession.getMapper(RentingMapper.class);
+        List<Renting> rentings=rentingMapper.selectByExample(rentingExample);
+        Map<String,Object> map=new HashMap<>();
+        if(rentings!=null && rentings.size()!=0){
+            //有该房间的信息
+            Renting renting=new Renting();
+            renting.setRoomId(roomID);
+            renting.setRentTime(rentTime);
+            renting.setRetreatTime(retreatTime);
+            RentingExample rentingExample1 = new RentingExample();
+            RentingExample.Criteria criteria1=rentingExample1.createCriteria();
+            criteria1.andRoomIdEqualTo(roomID);
+            int result=rentingMapper.updateByExampleSelective(renting,rentingExample1);
+            if(result==1){
+                map.put("result",0);
+                map.put("detail","修改renting表信息成功");
+            }else{
+                map.put("result",1);
+                map.put("detail","修改renting表信息失败");
+            }
+        }else{
+            //没有该房间的信息
+            Renting renting=new Renting();
+            renting.setRoomId(roomID);
+            renting.setRentTime(rentTime);
+            renting.setRetreatTime(retreatTime);
+            int result=rentingMapper.insertSelective(renting);
+            if(result==1){
+                map.put("result",0);
+                map.put("detail","添加renting表信息成功");
+            }else{
+                map.put("result",1);
+                map.put("detail","添加renting表信息失败");
+            }
+        }
+        return null;
+    }
 }

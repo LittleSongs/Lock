@@ -1,0 +1,109 @@
+.right_window{
+    overflow-y:scroll;
+    overflow-x:hidden;
+    background-color: #f0f8ff;
+    font-size: 30px;
+    float: right;
+    width: 84%;
+    top: 63px;
+    bottom: 64px;
+    left: 16%;
+}
+
+.right_window a:hover{
+    background-color: #a0bdff;
+}
+.right_window::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+.right_window::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: #535353;
+}
+.right_window::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background: #EDEDED;
+}
+
+.db{
+    width: 100%;
+}
+.db1{
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+.card{
+    font-size: 20px;
+    font-family: "微软雅黑";
+}
+.right_house{
+    width: 84%;
+    height: 60px;
+}
+.right_floors{
+    float: left;
+    width: 84%;
+    background-color: #f0f8ff;
+}
+.right_house_number{
+    height: 60px;
+    line-height: 60px;
+    float:left;
+    margin: auto 30px 0px;
+}
+.right_house_number1{
+    height: 60px;
+    line-height: 60px;
+    float:left;
+    margin: auto 30px 0px;
+    font-size: 10px;
+    font-family: "微软雅黑";
+}
+.right_floor{
+    width: 100%;
+    float: left;
+}
+.right_floors::before,.right_floors::after{
+    content: " ";
+    display: table;
+
+}
+.right_floors::after{
+    clear: both;
+}
+
+.right_floor_z{
+    margin: auto 45px 0px;
+    font-size: 18px;
+    float: left;
+}
+.right_rooms{
+    float: left;
+    margin-left: 60px;
+    width: 75%;
+}
+.right_room{
+
+    background-color: #2a6496;
+    margin-left:-3px;
+    margin-right: -5px;
+    margin-bottom: 5px                                   ;
+    height: 100px;
+    width: 75px;
+}
+.right_room_number,.right_room_icons{
+    font-size:18px;
+    text-align: center;
+}
+.right_room_icons{
+    margin-top: 13px;
+}
+.right_room_icons i{
+    font-size: 20px;
+    text-align: center;
+}
+

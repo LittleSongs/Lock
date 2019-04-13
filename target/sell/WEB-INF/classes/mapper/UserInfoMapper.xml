@@ -335,4 +335,14 @@
       u_is_modify = #{uIsModify,jdbcType=INTEGER}
     where u_id = #{uId,jdbcType=INTEGER}
   </update>
+
+    <!-- 插入一个商品 -->
+    <insert id="insertUserReturnUId" parameterType="com.dhy.yycompany.lock.bean.UserInfo"
+            useGeneratedKeys="true" keyProperty="uId">
+
+        INSERT INTO user_info(u_uuid,u_room_id,u_name,u_sex,u_id_card,
+        u_phone,u_stay_time,u_retreat_time,u_introduction,u_primary_user,u_delete,u_is_modify)
+        values(#{uUuid},#{uRoomId},#{uName},#{uSex},#{uIdCard},#{uPhone},#{uStayTime},
+        #{uRetreatTime},#{uIntroduction},#{uPrimaryUser},#{uDelete},#{uIsModify});
+    </insert>
 </mapper>

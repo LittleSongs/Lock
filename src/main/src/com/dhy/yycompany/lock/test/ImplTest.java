@@ -1,5 +1,7 @@
 package com.dhy.yycompany.lock.test;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.dhy.yycompany.lock.bean.UserInfo;
 import com.dhy.yycompany.lock.service.AdminService.AdministratorService;
 import com.dhy.yycompany.lock.service.ApartmentService.ApartmentService;
@@ -138,12 +140,12 @@ public class ImplTest {
     /**
      * 用户退宿功能：住户表删除住户，对应的room表住户数减1，住户对应的开门密码表的信息需要删除，指令表增加删除密码指令，让树莓派更新密码表。
      */
-    @Test
-    public void deleteUser(){
-        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
-        UserService userService=(UserService) context.getBean("userServiceImpl");
-        userService.deleteUser(22);
-    }
+//    @Test
+//    public void deleteUser(){
+//        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+//        UserService userService=(UserService) context.getBean("userServiceImpl");
+//        userService.deleteUser(22);
+//    }
 
     /**
      * 修改管理员信息11
@@ -191,10 +193,10 @@ public class ImplTest {
     //添加户主功能
     @Test
     public void addHomeMaster(){
+        JSON json=new JSONObject();
         ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
         UserService userService=(UserService) context.getBean("userServiceImpl");
-        userService.addHomeMaster("e",93,"wanggangdan","m","123123",
-                "123123","2018-03-03","2022-03-03","henshuai");
+        userService.addHomeMaster(json);
     }
 
     //添加指纹功能
@@ -202,6 +204,56 @@ public class ImplTest {
     public void addFingerPrint(){
         ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
         FingerPrintService fingerPrintService=(FingerPrintService) context.getBean("fingerPrintServiceImpl");
-        fingerPrintService.addFingerPrint();
+        fingerPrintService.addFingerPrint(23,50,"finger",1);
     }
+
+    //删除所有房间内的住户
+    @Test
+    public void deleteAllUsers(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserService userService=(UserService) context.getBean("userServiceImpl");
+        userService.deleteAllUsers(3);
+    }
+
+
+    //直接开门指令
+    @Test
+    public void openDoor(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        RoomInfoService roomInfoService = (RoomInfoService) context.getBean("roomInfoServiceImpl");
+        roomInfoService.openDoor(2,10);
+    }
+
+
+
+
+    //为用户生成永久密码
+    @Test
+    public void addUserKey(){
+        JSONObject jsonObject = new JSONObject();
+        Object object = null;
+        jsonObject.put("roomID", 2);
+        jsonObject.put("openDoorpassword","909090");
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserService userService=(UserService) context.getBean("userServiceImpl");
+        userService.addUserKey(jsonObject,4);
+    }
+
+
+    //绑定房间和门锁
+    @Test
+    public void bindRoomAndLock(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        RoomInfoService roomInfoService = (RoomInfoService) context.getBean("roomInfoServiceImpl");
+        roomInfoService.bindRoomLock(95,"1-1");
+    }
+
+    //renting表信息修改
+    @Test
+    public void modifyRenting(){
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        RoomInfoService roomInfoService = (RoomInfoService) context.getBean("roomInfoServiceImpl");
+        roomInfoService.rentingRoom(50,"2020-01-01","2030-01-01");
+    }
+
 }
